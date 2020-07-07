@@ -1,0 +1,90 @@
+{% extends "components/layout.twig" %}
+{% block siteTitle %}Demo Home{% endblock %}
+{% block content %}
+    {% include "components/header.twig" with {
+        "title": "Security Screening Application and Consent Form Demo",
+        "subtitle": "Please note that this application is a prototype and is not ready to be used in production.",
+        "breadcrumbs": [
+            {
+                "label": "Demo Home",
+                "link": "$ROOT/",
+                "title": "Return to the demo's homepage."
+            }
+        ]
+    } %}
+    <div data-c-padding="tb(3)">
+        <div data-c-container="base(full, center)">
+            <div data-c-grid="gutter(all, 2)">
+                <div data-c-grid-item="base(1of1) tl(1of2) equal-col">
+                    <div 
+                        data-c-background="white(100)"
+                        data-c-card
+                        data-c-padding="all(2)"
+                        data-c-radius="rounded">
+                        <h2 data-c-font-size="h2">Begin as an Applicant</h2>
+                        <p data-c-margin="tb(1)">This part of the demo illustrates how an applicant might register, log in, and complete a security screening application.</p>
+                        <a
+                            data-c-button="solid(c1)"
+                            data-c-radius="rounded"
+                            href="$ROOT/citizen/home/"
+                            title="Begin the demo as a citizen/applicant.">
+                            Begin Applicant Demo
+                        </a>
+                        <h3
+                            data-c-heading="h3"
+                            data-c-margin="top(2)">Quick Links</h3>
+                        <ul data-c-margin="top(1)">
+                            <li>
+                                <a
+                                    href="$ROOT/citizen/application/"
+                                    title="View the registration process for a security advisor.">Security Form</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div data-c-grid-item="base(1of1) tl(1of2) equal-col">
+                    <div 
+                        data-c-background="white(100)"
+                        data-c-card
+                        data-c-padding="all(2)"
+                        data-c-radius="rounded">
+                        <h2 data-c-font-size="h2">Begin as a Security Advisor</h2>
+                        <p data-c-margin="tb(1)">This part of the demo illustrates how a security advisor might register, login, and view security application forms.</p>
+                        <a
+                            data-c-button="solid(c1)"
+                            data-c-radius="rounded"
+                            href="$ROOT/admin/home/"
+                            title="Begin the demo as a Government of Canada security advisor.">
+                            Begin Advisor Demo
+                        </a>
+                        <h3
+                            data-c-heading="h3"
+                            data-c-margin="top(2)">Quick Links</h3>
+                        <ul data-c-margin="top(1)">
+                            <li>
+                                <a
+                                    href="$ROOT/admin/auth/register-01-account/"
+                                    title="View the registration process for a security advisor.">Registration</a>
+                            </li>
+                            <li>
+                                <a
+                                    href="$ROOT/admin/auth/login-01-account/"
+                                    title="View the login process for a security advisor.">Login</a>
+                            </li>
+                            <li>
+                                <a
+                                    href="$ROOT/admin/review-index/"
+                                    title="View how a security advisor might view a list of submitted applications.">List of Received Applications</a>
+                            </li>
+                            <li>
+                                <a
+                                    href="$ROOT/admin/review-submission/"
+                                    title="View how a security advisor might view an individual submission.">View an Application</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

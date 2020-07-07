@@ -1,0 +1,38 @@
+{% extends "../../components/layout.twig" %}
+{% block siteTitle %}Security Advisor Home{% endblock %}
+{% block content %}
+    {% include "../../components/header.twig" with {
+        "title": "Welcome to the Security Advisor Portal",
+        "subtitle": "Please note that this application is a prototype and is not ready to be used in production.",
+        "breadcrumbs": [
+            {
+                "label": "Demo Home",
+                "link": "$ROOT/",
+                "title": "Return to the demo's homepage."
+            },
+            {
+                "label": "Security Advisor Home",
+                "link": "$ROOT/admin/home/",
+                "title": "Return to the security advisor's homepage."
+            }
+        ]
+    } %}
+    {% include "../../components/home.twig" with {
+        "purposeTitle": "Purpose of the Security Advisor Portal",
+        "purposeDescription": "As a security advisor, this portal represents what it might be like to register, login, and view security applications submitted by applicants who are entering the Federal Public Service.",
+        "toolsTitle": "Get Started",
+        "toolsDescription": "To get going, please register for a new account, or login with an existing account.",
+        "tools": [
+            {
+                "label": "Register",
+                "link": "$ROOT/admin/auth/register-01-account/",
+                "title": "View the registration process for a security advisor."
+            },
+            {
+                "label": "Login",
+                "link": "$ROOT/admin/auth/login-01-account/",
+                "title": "View the login process for a security advisor."
+            }
+        ]
+    } %}
+{% endblock %}

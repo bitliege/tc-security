@@ -1,0 +1,75 @@
+{# Gov Banner #}
+<div data-c-padding="tb(1)">
+    <div data-c-container="base(full, center)">
+        <div data-c-grid="gutter(1, all) middle">
+            <div 
+                data-c-align="base(center) tp(left)"
+                data-c-grid-item="base(1of1) tp(1of2)">
+                <a 
+                    class="tc-header-gov-logo"
+                    href="https://canada.ca"
+                    target="_blank"
+                    title="Visit Canada.ca.">
+                    <img 
+                        alt=""
+                        src="$ROOT/img/logo-gov-can.svg">
+                </a>
+            </div>
+            <div
+                data-c-align="base(center) tp(right)" 
+                data-c-grid-item="base(1of1) tp(1of2)">
+                <span
+                    data-c-font-style="underline">Français</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+{# Header #}
+<header class="gradient">
+    {# Menu #}
+    {# Header Content #}
+    <div data-c-padding="top(4) bottom(3)">
+        <div data-c-container="base(full, center)">
+            <h1 data-c-heading="h1">{{ title }}</h1>
+            {% if subtitle %}
+                <p 
+                    data-c-color="white"
+                    data-c-margin="top(1)">{{ subtitle }}</p>
+            {% endif %}
+            <div data-c-padding="top(3)">
+                <div data-c-grid="gutter(all, 3) middle">
+                    <div
+                        data-c-align="base(center) tl(left)" 
+                        data-c-grid-item="base(1of1) tl(2of3)">
+                        <nav 
+                            aria-label="breadcrumb"
+                            data-c-breadcrumbs
+                            data-c-color="white">
+                            <ol>
+                                {% for crumb in breadcrumbs %}
+                                    <li>
+                                        {% if crumb == loop.last %}
+                                            <span aria-current="page">{{ crumb.label }}</span><i>/</i>
+                                        {% else %}
+                                            <a 
+                                                href="{{ crumb.link }}" 
+                                                title="{{ crumb.title }}">{{ crumb.label }}</a><i>/</i>
+                                        {% endif %}
+                                    </li>
+                                {% endfor %}
+                            </ol>
+                        </nav>
+                    </div>
+                    <div
+                        data-c-align="base(center) tl(right)"
+                        data-c-grid-item="base(1of1) tl(1of3)">
+                        <p 
+                            data-c-color="white"
+                            data-c-font-weight="bold">DEMO</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,68 @@
+{% extends "../../../components/layout.twig" %}
+{% block siteTitle %}Login{% endblock %}
+{% block content %}
+    {% include "../../../components/header.twig" with {
+        "title": "Login: 2-factor Authentication",
+        "subtitle": "Please note that this application is a prototype and is not ready to be used in production.",
+        "breadcrumbs": [
+            {
+                "label": "Demo Home",
+                "link": "$ROOT/",
+                "title": "Return to the demo's homepage."
+            },
+            {
+                "label": "Security Advisor Home",
+                "link": "$ROOT/admin/home/",
+                "title": "Return to the security advisor's homepage."
+            },
+            {
+                "label": "Login",
+                "link": "$ROOT/admin/auth/login-01-account/",
+                "title": "Return to the login process."
+            }
+        ]
+    } %}
+    <div data-c-padding="tb(3)">
+        <div data-c-container="base(medium, center)">
+            <form data-c-grid="gutter(all, 1)">
+                <div data-c-grid-item="base(1of1)">
+                    <h2 data-c-font-size="h2">Hi Cassandra, let's confirm it's you.</h2>
+                    <p data-c-margin="tb(1)">Please enter the temporary password from your authenticator app. <a href="#" title="Learn more about authentictor apps and remember which one you set up.">What's an authenticator app?</a></p>
+                </div>
+                <div
+                    data-c-grid-item="base(1of1)" 
+                    data-c-input="number">
+                    <label for="NUM2">Authenticator Code</label>
+                    <span>Required</span>
+                    <div>
+                        <input id="NUM2" placeholder="123 456" required type="number" value="234657"/>
+                    </div>
+                    <span>This input has an error.</span>
+                </div>
+                <div data-c-grid-item="base(1of1)">
+                    <hr 
+                        data-c-hr="thin(gray)"
+                        data-c-margin="top(.5) bottom(2)">
+                </div>
+                <div
+                    data-c-align="base(left)" 
+                    data-c-grid-item="base(1of2)">
+                    <a
+                        data-c-button="outline(c3)"
+                        data-c-radius="rounded"
+                        href="$ROOT/admin/home/"
+                        title="">Cancel</a>
+                </div>
+                <div
+                    data-c-align="base(right)" 
+                    data-c-grid-item="base(1of2)">
+                    <a
+                        data-c-button="solid(c1)"
+                        data-c-radius="rounded"
+                        href="$ROOT/admin/home-success/"
+                        title="">Submit</a>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

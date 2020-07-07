@@ -1,0 +1,51 @@
+<div data-c-padding="tb(3)">
+    <div data-c-container="base(full, center)">
+        <h2 
+            data-c-font-size="h2"
+            data-c-margin="bottom(2)">{{ purposeTitle }}</h2>
+        <div data-c-grid="gutter(all, 3) top">
+            <div data-c-grid-item="base(1of1) tl(3of5)">
+                <p>{{ purposeDescription }}</p>
+                <div data-c-grid="gutter(all, 1)">
+                    <div data-c-grid-item="base(1of1) tl(1of2)">
+                        <p 
+                            data-c-font-weight="bold"
+                            data-c-margin="top(2)">What this demo <span data-c-color="go">does do</span>:</p>
+                        <p data-c-margin="top(1)">Coming soon!</p>
+                    </div>
+                    <div data-c-grid-item="base(1of1) tl(1of2)">
+                        <p 
+                            data-c-font-weight="bold"
+                            data-c-margin="top(2)">What this demo <span data-c-color="stop">does not do</span>:</p>
+                        <p data-c-margin="top(1)">Coming soon!</p>
+                    </div>
+                </div>
+            </div>
+            <div data-c-grid-item="base(1of1) tl(2of5)">
+                <div
+                    data-c-background="c1(10)"
+                    data-c-border="all(thin, solid, c1)"
+                    data-c-radius="rounded">
+                    <div data-c-padding="all(2)">
+                        <h2 
+                            data-c-color="c1"
+                            data-c-font-size="h3"
+                            data-c-font-weight="bold">{{ toolsTitle }}</h2>
+                        <p 
+                            data-c-color="c1"
+                            data-c-margin="tb(1)">{{ toolsDescription }}</p>
+                        <ul data-c-color="c1">
+                            {% for tool in tools %}
+                                <li>
+                                    <a
+                                        href="{{ tool.link }}"
+                                        title="{{ tool.title }}">{{ tool.label }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

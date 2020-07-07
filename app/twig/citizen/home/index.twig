@@ -1,0 +1,38 @@
+{% extends "../../components/layout.twig" %}
+{% block siteTitle %}Applicant Home{% endblock %}
+{% block content %}
+    {% include "../../components/header.twig" with {
+        "title": "Welcome to the Security Application Portal",
+        "subtitle": "Please note that this application is a prototype and is not ready to be used in production.",
+        "breadcrumbs": [
+            {
+                "label": "Demo Home",
+                "link": "$ROOT/",
+                "title": "Return to the demo's homepage."
+            },
+            {
+                "label": "Applicant Home",
+                "link": "$ROOT/citizen/home/",
+                "title": "Return to the security screening application homepage."
+            }
+        ]
+    } %}
+    {% include "../../components/home.twig" with {
+        "purposeTitle": "Purpose of the Security Screening Application Demo",
+        "purposeDescription": "As a citizen, this portal represents what it might be like to register, login, complete, save, and submit an application to receive security clearance with the Government of Canada.",
+        "toolsTitle": "Get Started",
+        "toolsDescription": "To get going, please register for a new account, or login with an existing account.",
+        "tools": [
+            {
+                "label": "Register",
+                "link": "$ROOT/citizen/auth/register-01-account/",
+                "title": "View the registration process for a security advisor."
+            },
+            {
+                "label": "Login",
+                "link": "$ROOT/citizen/auth/login-01-account/",
+                "title": "View the login process for a security advisor."
+            }
+        ]
+    } %}
+{% endblock %}
