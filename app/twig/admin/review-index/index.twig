@@ -1,0 +1,150 @@
+{% extends "../../components/layout.twig" %}
+{% block siteTitle %}Review Applications{% endblock %}
+{% block content %}
+    {% include "../../components/header.twig" with {
+        "title": "Security Screening Applications",
+        "subtitle": "Please note that this application is a prototype and is not ready to be used in production.",
+        "breadcrumbs": [
+            {
+                "label": "Demo Home",
+                "link": "$ROOT/",
+                "title": "Return to the demo's homepage."
+            },
+            {
+                "label": "Security Advisor Home",
+                "link": "$ROOT/admin/home-success/",
+                "title": "Return to the index of applications."
+            },
+            {
+                "label": "Review Applications",
+                "link": "$ROOT/admin/review-index/",
+                "title": "Return to the index of applications."
+            }
+        ]
+    } %}
+    <div data-c-padding="tb(3)">
+        <div data-c-container="base(full, center)">
+            <h2 data-c-font-size="h2">Applications Submitted to Employment and Social Development Canada</h2>
+            <div 
+                data-c-container="base(medium, left)"
+                data-c-margin="top(1)">
+                <p>Below you will find a list of applications you've chosen to review, as well as applications that are awaiting assignment to an advisor. You can claim a screening application by clicking the "Claim and Decrypt" button. Once you're the assigned advisor for an application, you can view the contents of the application by clicking on it in the list.</p>
+            </div>
+            {% include "../../components/application.twig" with {
+                "title": "My Screening Applications",
+                "applications": [
+                    {
+                        "status": "assigned",
+                        "type": "reliability",
+                        "first": "Jason",
+                        "last": "Bergeron",
+                        "jobID": "68731984",
+                        "tcID": {
+                            "processID": "735736",
+                            "jobTitle": "Policy Advisor",
+                            "link": "https://talent.canada.ca"
+                        },
+                        "date": "05/JUL/2020",
+                        "time": "3 days",
+                        "delay": "ontime"
+                    },
+                    {
+                        "status": "assigned",
+                        "type": "top secret",
+                        "first": "Lisa",
+                        "last": "Cooke",
+                        "jobID": "36343489",
+                        "tcID": {
+                            "processID": "383565",
+                            "jobTitle": "PHP Developer",
+                            "link": "https://talent.canada.ca"
+                        },
+                        "date": "14/MAY/2020",
+                        "time": "25 days",
+                        "delay": "delayed"
+                    }
+                ]
+            } %}
+            {% include "../../components/application.twig" with {
+                "title": "Unassigned Screening Applications",
+                "applications": [
+                    {
+                        "status": "unassigned",
+                        "type": "reliability",
+                        "first": "Kurt",
+                        "last": "Robinson",
+                        "jobID": "26473454",
+                        "tcID": {
+                            "processID": "567423",
+                            "jobTitle": "Administrative Assistant",
+                            "link": "https://talent.canada.ca"
+                        },
+                        "date": "06/JUL/2020",
+                        "time": "2 days",
+                        "delay": "ontime"
+                    },
+                    {
+                        "status": "unassigned",
+                        "type": "secret",
+                        "first": "Frankie",
+                        "last": "Russel",
+                        "jobID": "23415845",
+                        "tcID": {
+                            "processID": "387458",
+                            "jobTitle": "Economics Advisor",
+                            "link": "https://talent.canada.ca"
+                        },
+                        "date": "02/JUL/2020",
+                        "time": "6 days",
+                        "delay": "delayed"
+                    },
+                    {
+                        "status": "unassigned",
+                        "type": "reliability",
+                        "first": "Melanie",
+                        "last": "Campbell",
+                        "jobID": "23745365",
+                        "tcID": {
+                            "processID": "734524",
+                            "jobTitle": "Policy Advisor",
+                            "link": "https://talent.canada.ca"
+                        },
+                        "date": "05/JUL/2020",
+                        "time": "3 days",
+                        "delay": "ontime"
+                    },
+                    {
+                        "status": "unassigned",
+                        "type": "top secret",
+                        "first": "Josef",
+                        "last": "Morelli",
+                        "jobID": "39274037",
+                        "tcID": {
+                            "processID": "028493",
+                            "jobTitle": "Security Services",
+                            "link": "https://talent.canada.ca"
+                        },
+                        "date": "06/JUL/2020",
+                        "time": "2 days",
+                        "delay": "ontime"
+                    },
+                    {
+                        "status": "unassigned",
+                        "type": "reliability",
+                        "first": "Giuseppe",
+                        "last": "Duran",
+                        "jobID": "58423654",
+                        "tcID": {
+                            "processID": "854369",
+                            "jobTitle": "Commissionaire",
+                            "link": "https://talent.canada.ca"
+                        },
+                        "date": "29/MAY/2020",
+                        "time": "10 days",
+                        "delay": "delayed"
+                    }
+                ]
+            } %}
+        </div>
+    </div>
+{% endblock %}
