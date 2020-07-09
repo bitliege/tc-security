@@ -352,4 +352,12 @@ $clone-grid-columns: 12;
             max-width: 20rem;
         }
 
+        // Admin Submission
+        .tc-comments {
+            max-height: 100vh;
+            overflow: auto;
+            position: sticky;
+            top: 0;
+        }
+
 }

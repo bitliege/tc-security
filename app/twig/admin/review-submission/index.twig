@@ -1,0 +1,234 @@
+{% extends "../../components/layout.twig" %}
+{% block siteTitle %}Review Applications{% endblock %}
+{% block content %}
+    {% include "../../components/header.twig" with {
+        "title": "Jason Bergeron's Reliability Application",
+        "subtitle": "Please note that this application is a prototype and is not ready to be used in production.",
+        "breadcrumbs": [
+            {
+                "label": "Demo Home",
+                "link": "$ROOT/",
+                "title": "Return to the demo's homepage."
+            },
+            {
+                "label": "Security Advisor Home",
+                "link": "$ROOT/admin/home-success/",
+                "title": "Return to the index of applications."
+            },
+            {
+                "label": "Review Applications",
+                "link": "$ROOT/admin/review-index/",
+                "title": "Return to the index of applications."
+            },
+            {
+                "label": "Jason's Application",
+                "link": "$ROOT/admin/review-submission/",
+                "title": "Return to Jason's application."
+            }
+        ]
+    } %}
+    <div data-c-container="full">
+        <div data-c-grid>
+            {# Nav #}
+            <div data-c-grid-item="base(1of1) tl(1of6) equal-col">
+                <div class="sidebar-wrapper">
+                    <div
+                        class="sidebar" 
+                        data-c-padding="tb(triple)">
+                        <span data-c-font-weight="bold" data-c-font-size="h4">On this page:</span>
+                        <nav data-c-margin="top(normal)">
+                            <ul>
+                                <li>
+                                    <a href="#background" title="">Background Information</a>
+                                </li>
+                                <li>
+                                    <a href="#background" title="">Residence</a>
+                                </li>
+                                <li>
+                                    <a href="#background" title="">Professional Background</a>
+                                </li>
+                                <li>
+                                    <a href="#background" title="">Personal References</a>
+                                </li>
+                                <li>
+                                    <a href="#background" title="">Education and Designations</a>
+                                </li>
+                                <li>
+                                    <a href="#background" title="">Criminal Record</a>
+                                </li>
+                                <br>
+                                <li>
+                                    <a href="#background" title="">Verify and Submit</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            {# Application #}
+            <div
+                data-c-grid-item="base(1of1) tl(3of6)" 
+                data-c-padding="bottom(3) right(3)">
+                <h2
+                    data-c-font-size="h2"
+                    data-c-padding="top(3)"
+                    id="background">Background Information</h2>
+                <h3 
+                    data-c-heading="h3"
+                    data-c-margin="top(2) bottom(1)">Legal Name and Contact Information</h3>
+                <div data-c-grid="gutter(all, 1)">
+                    <div data-c-grid-item="base(1of1)">
+                        Sup
+                    </div>
+                </div>
+                <h3 
+                    data-c-heading="h3"
+                    data-c-margin="top(2) bottom(1)">Previous Legal Names</h3>
+                <div data-c-grid="gutter(all, 1)">
+                    <div data-c-grid-item="base(1of1)">
+                        Sup
+                    </div>
+                </div>
+                <h3 
+                    data-c-heading="h3"
+                    data-c-margin="top(2) bottom(1)">Citizenship</h3>
+                <div data-c-grid="gutter(all, 1)">
+                    <div data-c-grid-item="base(1of1)">
+                        Sup
+                    </div>
+                </div>
+                <h3 
+                    data-c-heading="h3"
+                    data-c-margin="top(2) bottom(1)">Previous Security Screening</h3>
+                <div data-c-grid="gutter(all, 1)">
+                    <div data-c-grid-item="base(1of1)">
+                        Sup
+                    </div>
+                </div>
+                <h2
+                    data-c-font-size="h2"
+                    data-c-padding="top(3)"
+                    id="residence">Residence</h2>
+                {% include "../../components/application-null.twig" %}
+                <h2
+                    data-c-font-size="h2"
+                    data-c-padding="top(3)"
+                    id="professionalBackground">Professional Background</h2>
+                {% include "../../components/application-null.twig" %}
+                <h2
+                    data-c-font-size="h2"
+                    data-c-padding="top(3)"
+                    id="personalReferences">Personal References</h2>
+                {% include "../../components/application-null.twig" %}
+                <h2
+                    data-c-font-size="h2"
+                    data-c-padding="top(3)"
+                    id="education">Education and Designations</h2>
+                {% include "../../components/application-null.twig" %}
+                <h2
+                    data-c-font-size="h2"
+                    data-c-padding="top(3)"
+                    id="criminalRecord">Criminal Record</h2>
+                {% include "../../components/application-null.twig" %}
+                <h2
+                    data-c-font-size="h2"
+                    data-c-padding="top(3)"
+                    id="verification">Verify and Submit</h2>
+                {% include "../../components/application-null.twig" %}
+            </div>
+            {# Comments #}
+            <div data-c-grid-item="base(1of1) tl(2of6) equal-col">
+                <div class="sidebar-wrapper">
+                    <div
+                        class="tc-comments"
+                        data-c-padding="tb(3)">
+                        <h2 data-c-heading="h3">Add a Note</h2>
+                        <p data-c-margin="tb(1)">Please note that "shared" note will be sent along to the applicant in the event their application is denied so that they can fix problems that have been identified.</p>
+                        <div 
+                            data-c-background="c1(10)"
+                            data-c-border="all(thin, solid, c1)"
+                            data-c-margin="bottom(1)"
+                            data-c-padding="top(1) left(1) right(1) bottom(.5)"
+                            data-c-radius="rounded">
+                            <form data-c-grid="gutter(all, 1) middle">
+                                <div
+                                    data-c-grid-item="base(1of1)" 
+                                    data-c-input="textarea"
+                                    style="margin-bottom: -2rem;">
+                                    <label for="TA2">Note:</label>
+                                    <span>Required</span>
+                                    <div>
+                                        <textarea id="TA2" placeholder="e.g. The reference section needs more detailed information..."></textarea>
+                                    </div>
+                                    {# <span>This input has an error.</span> #}
+                                </div>
+                                <div
+                                    data-c-grid-item="base(1of1) tl(2of3)"
+                                    data-c-input="checkbox(single)">
+                                    <span>Required</span>
+                                    <div>
+                                        <label for="cA1">
+                                            <input
+                                                id="cA1"
+                                                type="checkbox"/>
+                                            <span>Share this note with applicant.</span>
+                                        </label>
+                                    </div>
+                                    <span>This input has an error.</span>
+                                </div>
+                                <div
+                                    data-c-align="base(left) tl(right)" 
+                                    data-c-grid-item="base(1of1) tl(1of3)">
+                                    <button
+                                        data-c-button="solid(c1)"
+                                        data-c-radius="rounded">Add Note</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div data-c-accordion-group>
+                            <div data-c-accordion>
+                                <button aria-expanded="false" data-c-accordion-trigger tabindex="0" type="button">
+                                    <div>
+                                        <p>View All Notes (3)</p>
+                                    </div>
+                                    <span data-c-visibility="invisible">Click to view...</span>
+                                    <i aria-hidden="true" data-c-accordion-add data-c-color="c1" data-c-font-size="h3" data-c-font-weight="bold">+</i>
+                                    <i aria-hidden="true" data-c-accordion-remove data-c-color="c1" data-c-font-size="h3" data-c-font-weight="bold">-</i>
+                                </button>
+                                <div aria-hidden="true" data-c-accordion-content>
+                                    <div data-c-padding="top(.5) bottom(1)">
+                                        {% include "../../components/comment.twig" with {
+                                            "comments": [
+                                                {
+                                                    "status": "shared",
+                                                    "first": "Cassandra",
+                                                    "last": "Goodwill",
+                                                    "date": "2020/JUL/04",
+                                                    "copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique lectus congue magna dignissim ultricies. Praesent mi tellus, aliquet at felis ac, aliquet congue augue."
+                                                },
+                                                {
+                                                    "status": "private",
+                                                    "first": "Cassandra",
+                                                    "last": "Goodwill",
+                                                    "date": "2020/JUL/02",
+                                                    "copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique lectus congue magna dignissim ultricies. Praesent mi tellus, aliquet at felis ac, aliquet congue augue. Donec volutpat odio quis mauris sagittis, a tempor turpis feugiat. Aliquam rutrum massa ac augue commodo mollis."
+                                                },
+                                                {
+                                                    "status": "private",
+                                                    "first": "Cassandra",
+                                                    "last": "Goodwill",
+                                                    "date": "2020/JUL/02",
+                                                    "copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique lectus congue magna dignissim ultricies."
+                                                }
+                                            ]
+                                        } %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

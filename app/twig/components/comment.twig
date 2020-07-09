@@ -1,0 +1,28 @@
+{% for comment in comments %}
+    <div
+        data-c-background="c1(10)"
+        data-c-border="all(thin, solid, c1)"
+        data-c-margin="top(.25)"
+        data-c-padding="all(1)"
+        data-c-radius="rounded">
+        <div data-c-grid="gutter(1)">
+            <div data-c-grid-item="base(1of2)">
+                <p><span data-c-font-weight="bold">({{ comment.status|title }})</span> {{ comment.first }} {{ comment.last }}</p>
+                <p
+                    data-c-font-size="small"
+                    data-c-margin="top(.25)">{{ comment.date }}</p>
+            </div>
+            <div 
+                data-c-align="base(right)"
+                data-c-grid-item="base(1of2)">
+                <a 
+                    data-c-font-size="small"
+                    href="#"
+                    title="Delete this comment. Note that the comment will remain in the database for log purposes.">Delete</a>
+            </div>
+            <div data-c-grid-item="base(1of1)">
+                <p>{{ comment.copy }}</p>
+            </div>
+        </div>
+    </div>
+{% endfor %}
