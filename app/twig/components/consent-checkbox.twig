@@ -1,0 +1,24 @@
+{% for verification in verifications %}
+    <tr>
+        <td>
+            <p data-c-font-weight="bold">{{ verification.label }}</p>
+            <form>
+                <div data-c-input="radio">
+                    <label for="{{ verification.id }}RG2">Select one:</label>
+                    <span>Required</span>
+                    <div id="{{ verification.id }}RG2" role="radiogroup">
+                        <label for="{{ verification.id }}rB1">
+                            <input id="{{ verification.id }}rB1" required name="{{ verification.id }}radioB" type="radio" />
+                            <span>I confirm this verification was performed.</span>
+                        </label>
+                        <label for="{{ verification.id }}rB2">
+                            <input id="{{ verification.id }}rB2" required name="{{ verification.id }}radioB" type="radio" />
+                            <span>This verification was not needed.</span>
+                        </label>
+                    </div>
+                    <span>This input has an error.</span>
+                </div>
+            </form>
+        </td>
+    </tr>
+{% endfor %}

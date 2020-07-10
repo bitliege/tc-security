@@ -1,0 +1,64 @@
+{% extends "../../../components/layout.twig" %}
+{% block siteTitle %}Register{% endblock %}
+{% block content %}
+    {% include "../../../components/header.twig" with {
+        "title": "Registration: 2-factor Authentication Verification",
+        "subtitle": "Please note that this application is a prototype and is not ready to be used in production.",
+        "breadcrumbs": [
+            {
+                "label": "Demo Home",
+                "link": "$ROOT/",
+                "title": "Return to the demo's homepage."
+            },
+            {
+                "label": "Applicant Home",
+                "link": "$ROOT/citizen/home/",
+                "title": "Return to the applicant homepage."
+            },
+            {
+                "label": "Registration",
+                "link": "$ROOT/citizen/auth/register-04-second-factor-verify/",
+                "title": "Return to the registration process."
+            }
+        ]
+    } %}
+    <div data-c-padding="tb(3)">
+        <div data-c-container="base(medium, center)">
+            <form data-c-grid="gutter(all, 1)">
+                <div data-c-grid-item="base(1of1)">
+                    <h2 data-c-font-size="h2">Let's enter your temporary code.</h2>
+                    <p data-c-margin="tb(1)">Enter the temporary code displayed on your authenticator app into the field below. Make sure you submit the code before it expires!</p>
+                </div>
+                <div
+                    data-c-grid-item="base(1of1)" 
+                    data-c-input="number">
+                    <label for="NUM2">Authenticator Code</label>
+                    <span>Required</span>
+                    <div>
+                        <input id="NUM2" placeholder="123 456" required type="number" value="234657"/>
+                    </div>
+                    <span>This input has an error.</span>
+                </div>
+                <div data-c-grid-item="base(1of1)">
+                    <hr 
+                        data-c-hr="thin(gray)"
+                        data-c-margin="top(.5) bottom(2)">
+                    <p 
+                        data-c-color="c2"
+                        data-c-font-weight="bold"
+                        data-c-margin="bottom(.5)">What's Next</p>
+                    <p data-c-margin="bottom(1)">This is the last step! Once we confirm you've entered the code properly we'll log you in and take you back to the homepage.</p>
+                </div>
+                <div
+                    data-c-align="base(right)" 
+                    data-c-grid-item="base(1of1)">
+                    <a
+                        data-c-button="solid(c1)"
+                        data-c-radius="rounded"
+                        href="$ROOT/citizen/auth/register-05-success/"
+                        title="">Submit</a>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

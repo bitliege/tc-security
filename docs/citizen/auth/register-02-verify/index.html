@@ -5,7 +5,7 @@
     <head>
 
         
-        <title>Applicant Home | Security Screening Application and Consent Form Demo</title>
+        <title>Register | Security Screening Application and Consent Form Demo</title>
         
         
         <meta charset="utf-8" />
@@ -74,7 +74,7 @@
     
     <div data-c-padding="top(4) bottom(3)">
         <div data-c-container="base(full, center)">
-            <h1 data-c-heading="h1">Welcome Back, Jason</h1>
+            <h1 data-c-heading="h1">Registration: Verify your Email</h1>
             
                 <p 
                     data-c-color="white"
@@ -102,8 +102,16 @@
                                     <li>
                                         
                                             <a 
-                                                href="/tc-security/citizen/home-success/" 
+                                                href="/tc-security/citizen/home/" 
                                                 title="Return to the applicant homepage.">Applicant Home</a><i>/</i>
+                                        
+                                    </li>
+                                
+                                    <li>
+                                        
+                                            <a 
+                                                href="/tc-security/citizen/auth/register-02-verify/" 
+                                                title="Return to the registration process.">Registration</a><i>/</i>
                                         
                                     </li>
                                 
@@ -123,68 +131,44 @@
     </div>
 </header>
     <div data-c-padding="tb(3)">
-    <div data-c-container="base(full, center)">
-        <h2 
-            data-c-font-size="h2"
-            data-c-margin="bottom(2)">Purpose of the Security Screening Application Demo</h2>
-        <div data-c-grid="gutter(all, 3) top">
-            <div data-c-grid-item="base(1of1) tl(3of5)">
-                <p>As a citizen, this portal represents what it might be like to register, login, complete, save, and submit an application to receive security clearance with the Government of Canada.</p>
-                <div data-c-grid="gutter(all, 1)">
-                    <div data-c-grid-item="base(1of1) tl(1of2)">
-                        <p 
-                            data-c-font-weight="bold"
-                            data-c-margin="top(2)">What this demo <span data-c-color="go">does do</span>:</p>
-                        <p data-c-margin="top(1)">Coming soon!</p>
-                    </div>
-                    <div data-c-grid-item="base(1of1) tl(1of2)">
-                        <p 
-                            data-c-font-weight="bold"
-                            data-c-margin="top(2)">What this demo <span data-c-color="stop">does not do</span>:</p>
-                        <p data-c-margin="top(1)">Coming soon!</p>
-                    </div>
+        <div data-c-container="base(medium, center)">
+            <form data-c-grid="gutter(all, 1)">
+                <div data-c-grid-item="base(1of1)">
+                    <h2 data-c-font-size="h2">Hi Jason, it's nice to meet you!</h2>
+                    <p data-c-margin="tb(1)">Please enter the code we've emailed you into the field below to confirm your email address. <a href="#" title="Click here if you did not receive a code.">I didn't receive a code!</a></p>
                 </div>
-            </div>
-            <div data-c-grid-item="base(1of1) tl(2of5)">
+                <div 
+                    data-c-grid-item="base(1of1)"
+                    data-c-input="number">
+                    <label for="NUM2">Verification Code</label>
+                    <span>Required</span>
+                    <div>
+                        <input id="NUM2" placeholder="12345" required type="number" value="34520"/>
+                    </div>
+                    <span>This input has an error.</span>
+                </div>
+                <div data-c-grid-item="base(1of1)">
+                    <hr 
+                        data-c-hr="thin(gray)"
+                        data-c-margin="top(.5) bottom(2)">
+                    <p 
+                        data-c-color="c2"
+                        data-c-font-weight="bold"
+                        data-c-margin="bottom(.5)">What's Next</p>
+                    <p data-c-margin="bottom(1)">The next step involves using an "authenticator" application on your mobile device to secure your account using a "second factor", which means your account is protected by not only a password, but the authenticator application too!</p>
+                </div>
                 <div
-                    data-c-background="c1(10)"
-                    data-c-border="all(thin, solid, c1)"
-                    data-c-radius="rounded">
-                    <div data-c-padding="all(2)">
-                        <h2 
-                            data-c-color="c1"
-                            data-c-font-size="h3"
-                            data-c-font-weight="bold">My Info and Tools</h2>
-                        <p 
-                            data-c-color="c1"
-                            data-c-margin="tb(1)">Below is a list of handy links that allow you to access your information and tools.</p>
-                        <ul data-c-color="c1">
-                            
-                                <li>
-                                    <a
-                                        href="/tc-security/citizen/profile/"
-                                        title="Manage your account information, reset your password, etc.">My Profile and Feedback</a>
-                                </li>
-                            
-                                <li>
-                                    <a
-                                        href="/tc-security/citizen/application/"
-                                        title="Open the application tool to create a new application or edit an old one.">Create or Edit a Security Application</a>
-                                </li>
-                            
-                                <li>
-                                    <a
-                                        href="/tc-security/citizen/home/"
-                                        title="Logout of the application.">Logout</a>
-                                </li>
-                            
-                        </ul>
-                    </div>
+                    data-c-align="base(right)" 
+                    data-c-grid-item="base(1of1)">
+                    <a
+                        data-c-button="solid(c1)"
+                        data-c-radius="rounded"
+                        href="/tc-security/citizen/auth/register-03-second-factor"
+                        title="">Submit</a>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
-</div>
 
 
         <footer 

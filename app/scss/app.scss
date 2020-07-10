@@ -365,5 +365,12 @@ $clone-grid-columns: 12;
             max-width: 2rem;
             vertical-align: middle;
         }
+        
+        .tc-consent-table {
+            table tbody tr td {
+                padding-top: 2rem;
+                padding-bottom: 0;
+            }
+        }
 
 }

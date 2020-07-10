@@ -5,7 +5,7 @@
     <head>
 
         
-        <title>Applicant Home | Security Screening Application and Consent Form Demo</title>
+        <title>Register | Security Screening Application and Consent Form Demo</title>
         
         
         <meta charset="utf-8" />
@@ -74,7 +74,7 @@
     
     <div data-c-padding="top(4) bottom(3)">
         <div data-c-container="base(full, center)">
-            <h1 data-c-heading="h1">Welcome Back, Jason</h1>
+            <h1 data-c-heading="h1">Register an Account</h1>
             
                 <p 
                     data-c-color="white"
@@ -102,8 +102,16 @@
                                     <li>
                                         
                                             <a 
-                                                href="/tc-security/citizen/home-success/" 
+                                                href="/tc-security/citizen/home/" 
                                                 title="Return to the applicant homepage.">Applicant Home</a><i>/</i>
+                                        
+                                    </li>
+                                
+                                    <li>
+                                        
+                                            <a 
+                                                href="/tc-security/citizen/auth/register-01-account/" 
+                                                title="Return to the registration process.">Registration</a><i>/</i>
                                         
                                     </li>
                                 
@@ -123,68 +131,119 @@
     </div>
 </header>
     <div data-c-padding="tb(3)">
-    <div data-c-container="base(full, center)">
-        <h2 
-            data-c-font-size="h2"
-            data-c-margin="bottom(2)">Purpose of the Security Screening Application Demo</h2>
-        <div data-c-grid="gutter(all, 3) top">
-            <div data-c-grid-item="base(1of1) tl(3of5)">
-                <p>As a citizen, this portal represents what it might be like to register, login, complete, save, and submit an application to receive security clearance with the Government of Canada.</p>
-                <div data-c-grid="gutter(all, 1)">
-                    <div data-c-grid-item="base(1of1) tl(1of2)">
-                        <p 
-                            data-c-font-weight="bold"
-                            data-c-margin="top(2)">What this demo <span data-c-color="go">does do</span>:</p>
-                        <p data-c-margin="top(1)">Coming soon!</p>
-                    </div>
-                    <div data-c-grid-item="base(1of1) tl(1of2)">
-                        <p 
-                            data-c-font-weight="bold"
-                            data-c-margin="top(2)">What this demo <span data-c-color="stop">does not do</span>:</p>
-                        <p data-c-margin="top(1)">Coming soon!</p>
-                    </div>
+        <div data-c-container="base(medium, center)">
+            <form data-c-grid="gutter(all, 1)">
+                <div data-c-grid-item="base(1of1)">
+                    <h2 data-c-font-size="h2">Hey, thanks for registering!</h2>
+                    <p data-c-margin="tb(1)">Let's get started by collecting some basic information about you.</p>
                 </div>
-            </div>
-            <div data-c-grid-item="base(1of1) tl(2of5)">
                 <div
-                    data-c-background="c1(10)"
-                    data-c-border="all(thin, solid, c1)"
-                    data-c-radius="rounded">
-                    <div data-c-padding="all(2)">
-                        <h2 
-                            data-c-color="c1"
-                            data-c-font-size="h3"
-                            data-c-font-weight="bold">My Info and Tools</h2>
-                        <p 
-                            data-c-color="c1"
-                            data-c-margin="tb(1)">Below is a list of handy links that allow you to access your information and tools.</p>
-                        <ul data-c-color="c1">
-                            
-                                <li>
-                                    <a
-                                        href="/tc-security/citizen/profile/"
-                                        title="Manage your account information, reset your password, etc.">My Profile and Feedback</a>
-                                </li>
-                            
-                                <li>
-                                    <a
-                                        href="/tc-security/citizen/application/"
-                                        title="Open the application tool to create a new application or edit an old one.">Create or Edit a Security Application</a>
-                                </li>
-                            
-                                <li>
-                                    <a
-                                        href="/tc-security/citizen/home/"
-                                        title="Logout of the application.">Logout</a>
-                                </li>
-                            
-                        </ul>
+                    data-c-grid-item="base(1of1) tl(1of2)" 
+                    data-c-input="text">
+                    <label for="TI2">My First Name</label>
+                    <span>Required</span>
+                    <div>
+                        <input id="TI2" placeholder="e.g. Clark" required type="text" value="Jason" />
                     </div>
+                    <span>This input has an error.</span>
                 </div>
-            </div>
+                <div
+                    data-c-grid-item="base(1of1) tl(1of2)" 
+                    data-c-input="text">
+                    <label for="TI2">My Last Name</label>
+                    <span>Required</span>
+                    <div>
+                        <input id="TI2" placeholder="e.g. Kent" required type="text" value="Bergeron" />
+                    </div>
+                    <span>This input has an error.</span>
+                </div>
+                <div 
+                    data-c-grid-item="base(1of1)"
+                    data-c-input="email">
+                    <label for="EM2">My Email (used to log in)</label>
+                    <span>Required</span>
+                    <div>
+                        <input id="EM2" placeholder="e.g. first.last@email.com" required type="email" value="jason.bergeron@email.com"/>
+                    </div>
+                    <span>This input has an error.</span>
+                </div>
+                <div data-c-grid-item="base(1of1)">
+                    <p data-c-margin="bottom(.5)">Please create a password that meets the following criteria:</p>
+                    <ul data-c-margin="bottom(1)">
+                        <li>contains at least 15 characters</li>
+                        <li>uses at least one lowercase letter</li>
+                        <li>uses at least one uppercase letter</li>
+                        <li>uses at least one number</li>
+                        <li>uses at least one of these symbols: !, @, #, $, %, ^, &amp;, *</li>
+                    </ul>
+                </div>
+                <div
+                    data-c-grid-item="base(1of1) tl(1of2)" 
+                    data-c-input="password">
+                    <label for="p2">My Password</label>
+                    <span>Required</span>
+                    <div>
+                        <input id="p2" required type="password" value="G1asses@reTheBestDisguise" />
+                        <button type="button">
+                            <i class="material-icons">
+                                visibility
+                            </i>
+                            <i class="material-icons">
+                                visibility_off
+                            </i>
+                        </button>
+                    </div>
+                    <span>This input has an error.</span>
+                </div>
+                <div
+                    data-c-grid-item="base(1of1) tl(1of2)" 
+                    data-c-input="password">
+                    <label for="p2">Confirm Password</label>
+                    <span>Required</span>
+                    <div>
+                        <input id="p2" required type="password" value="G1asses@reTheBestDisguise" />
+                        <button type="button">
+                            <i class="material-icons">
+                                visibility
+                            </i>
+                            <i class="material-icons">
+                                visibility_off
+                            </i>
+                        </button>
+                    </div>
+                    <span>This input has an error.</span>
+                </div>
+                <div data-c-grid-item="base(1of1)">
+                    <hr 
+                        data-c-hr="thin(gray)"
+                        data-c-margin="top(.5) bottom(2)">
+                    <p 
+                        data-c-color="c2"
+                        data-c-font-weight="bold"
+                        data-c-margin="bottom(.5)">What's Next</p>
+                    <p data-c-margin="bottom(1)">Next up, we'll verify your email and set up 2-factor authentication to keep your account secure!</p>
+                </div>
+                <div
+                    data-c-align="base(left)" 
+                    data-c-grid-item="base(1of2)">
+                    <a
+                        data-c-button="outline(c3)"
+                        data-c-radius="rounded"
+                        href="/tc-security/citizen/home/"
+                        title="">Cancel</a>
+                </div>
+                <div
+                    data-c-align="base(right)" 
+                    data-c-grid-item="base(1of2)">
+                    <a
+                        data-c-button="solid(c1)"
+                        data-c-radius="rounded"
+                        href="/tc-security/citizen/auth/register-02-verify"
+                        title="">Submit</a>
+                </div>
+            </form>
         </div>
     </div>
-</div>
 
 
         <footer 

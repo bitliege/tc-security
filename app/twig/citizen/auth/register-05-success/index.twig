@@ -1,0 +1,51 @@
+{% extends "../../../components/layout.twig" %}
+{% block siteTitle %}Register{% endblock %}
+{% block content %}
+    {% include "../../../components/header.twig" with {
+        "title": "You've Successfully Registered",
+        "subtitle": "Please note that this application is a prototype and is not ready to be used in production.",
+        "breadcrumbs": [
+            {
+                "label": "Demo Home",
+                "link": "$ROOT/",
+                "title": "Return to the demo's homepage."
+            },
+            {
+                "label": "Security Advisor Home",
+                "link": "$ROOT/citizen/home/",
+                "title": "Return to the security advisor's homepage."
+            },
+            {
+                "label": "Registration",
+                "link": "$ROOT/citizen/auth/register-05-success/",
+                "title": "Return to the registration process."
+            }
+        ]
+    } %}
+    <div data-c-padding="tb(3)">
+        <div data-c-container="base(medium, center)">
+            <form data-c-grid="gutter(all, 1)">
+                <div data-c-grid-item="base(1of1)">
+                    <h2 data-c-font-size="h2">Great work! You're ready to start an application.</h2>
+                    <p data-c-margin="tb(1)">Thanks Jason, you've successfully registered to the security screening application portal. From here, you can begin an application by selecting "Create or Edit a Security Application" from the homepage.</p>
+                    <p data-c-margin="tb(1)">It's important to note that this application works a little differently than you might be used to. In order to give you control over your own data, we use a file upload/download process to allow you to edit your application. This means that instead of saving your application to a server, whenever you're ready to take a break or submit a final copy, we'll ask you to download a file. When you're ready to continue on, you can simply upload the same file back into the tool and all your information will magically appear.</p>
+                    <p data-c-margin="tb(1)"><a href="#" title="Learn more about how we keep your information safe.">Want to learn more about how we're taking steps to keep your data private? Click here to find out more about how this application works.</a></p>
+                </div>
+                <div data-c-grid-item="base(1of1)">
+                    <hr 
+                        data-c-hr="thin(gray)"
+                        data-c-margin="top(.5) bottom(1)">
+                </div>
+                <div
+                    data-c-align="base(right)" 
+                    data-c-grid-item="base(1of1)">
+                    <a
+                        data-c-button="solid(c1)"
+                        data-c-radius="rounded"
+                        href="$ROOT/citizen/home-success/"
+                        title="">Let's Go!</a>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

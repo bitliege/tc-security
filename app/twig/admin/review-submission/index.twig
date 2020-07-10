@@ -163,11 +163,11 @@
                         <p data-c-margin="top(.25) left(1)">Top Secret, Department of Defense, 2017</p>
                     </div>
                     <div data-c-grid-item="base(1of1)">
-                        <p data-c-font-weight="bold"><span data-c-color="go" data-c-margin="right(.5)">✓</span> Jason's has previously been granted security status or clearance.</p>
+                        <p data-c-font-weight="bold"><span data-c-color="go" data-c-margin="right(.5)">✓</span> Jason has previously been granted security status or clearance.</p>
                         <p data-c-margin="top(.25) left(1)">Top Secret, Department of Defense, 2017</p>
                     </div>
                     <div data-c-grid-item="base(1of1)">
-                        <p data-c-font-weight="bold"><span data-c-color="stop" data-c-margin="right(.5)">X</span> Jason security status or clearance has never been revoked.</p>
+                        <p data-c-font-weight="bold"><span data-c-color="stop" data-c-margin="right(.5)">X</span> Jason's security status or clearance has never been revoked.</p>
                     </div>
                     <div data-c-grid-item="base(1of1)">
                         <p data-c-font-weight="bold"><span data-c-color="stop" data-c-margin="right(.5)">X</span> Jason has never been denied security status or clearance.</p>
@@ -202,7 +202,106 @@
                     data-c-font-size="h2"
                     data-c-padding="top(3)"
                     id="verification">Verify and Submit</h2>
-                {% include "../../components/application-null.twig" %}
+                <p data-c-margin="tb(1)">I, the delegated  hiring official or  security official, confirm that I have performed the following verifications, assessments, and inquiries:</p>
+                <div 
+                    class="tc-consent-table"
+                    data-c-table>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">
+                                    Verification
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% include "../../components/consent-checkbox.twig" with {
+                                "verifications": [
+                                    {
+                                        "id": "ver1",
+                                        "label": "Verification of identity and background"
+                                    },
+                                    {
+                                        "id": "ver2",
+                                        "label": "Verification of educational and professional credentials"
+                                    },
+                                    {
+                                        "id": "ver3",
+                                        "label": "Verifications of personal and professional references"
+                                    },
+                                    {
+                                        "id": "ver4",
+                                        "label": "Law enforcement inquiry (criminal record check)"
+                                    },
+                                    {
+                                        "id": "ver5",
+                                        "label": "Financial inquiry (credit check)"
+                                    },
+                                    {
+                                        "id": "ver6",
+                                        "label": "Law enforcement inquiry (law enforcement record check)"
+                                    },
+                                    {
+                                        "id": "ver7",
+                                        "label": "Security questionnaire and/or security interview"
+                                    },
+                                    {
+                                        "id": "ver8",
+                                        "label": "Open source inquiry"
+                                    },
+                                    {
+                                        "id": "ver9",
+                                        "label": "CSIS security assessment"
+                                    },
+                                    {
+                                        "id": "ver10",
+                                        "label": "Foreign assets"
+                                    },
+                                    {
+                                        "id": "ver11",
+                                        "label": "Military service"
+                                    },
+                                    {
+                                        "id": "ver12",
+                                        "label": "Polygraph examinations"
+                                    }
+                                ]
+                            } %}
+                        </tbody>
+                    </table>
+                </div>
+                <hr 
+                    data-c-hr="thin(gray)"
+                    data-c-margin="tb(3)">
+                <div data-c-grid="gutter(all, 1)">
+                    <div
+                        data-c-align="base(center) tl(left)" 
+                        data-c-grid-item="base(1of1) tl(1of3)">
+                        <a
+                            data-c-button="outline(stop)"
+                            data-c-radius="rounded"
+                            href="#"
+                            title="Save and continue reviewing later.">Save and Reject</a>
+                    </div>
+                    <div
+                        data-c-align="base(center)" 
+                        data-c-grid-item="base(1of1) tl(1of3)">
+                        <a
+                            data-c-button="outline(c1)"
+                            data-c-radius="rounded"
+                            href="#"
+                            title="Save and continue reviewing later.">Save and Quit</a>
+                    </div>
+                    <div
+                        data-c-align="base(center) tl(right)" 
+                        data-c-grid-item="base(1of1) tl(1of3)">
+                        <a
+                            data-c-button="solid(go)"
+                            data-c-radius="rounded"
+                            href="#"
+                            title="Save and continue reviewing later.">Save and Approve</a>
+                    </div>
+                </div>
             </div>
             {# Comments #}
             <div data-c-grid-item="base(1of1) tl(3of10) equal-col">
