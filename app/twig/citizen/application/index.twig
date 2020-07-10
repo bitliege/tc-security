@@ -1,324 +1,205 @@
-<!DOCTYPE html>
+{% extends "../../components/layout.twig" %}
+{% block siteTitle %}Review Applications{% endblock %}
+{% block content %}
+    {% include "../../components/header.twig" with {
+        "title": "Security Screening Application and Consent Form Demo",
+        "subtitle": "Please note that this application is a prototype and is not ready to be used in production.",
+        "breadcrumbs": [
+            {
+                "label": "Demo Home",
+                "link": "$ROOT/",
+                "title": "Return to the demo's homepage."
+            },
+            {
+                "label": "Applicant Home",
+                "link": "$ROOT/citizen/home-success/",
+                "title": "Return to the applicant homepage."
+            },
+            {
+                "label": "Security Screening Application",
+                "link": "$ROOT/citizen/application/",
+                "title": "Create or edit a security screening application."
+            }
+        ]
+    } %}
 
-<html lang="en">
-
-    <head>
-
-        {# Site Title #}
-        <title>Talent Cloud: Security Screening Application and Consent Form Demo</title>
-        
-        {# Charset #}
-        <meta charset="utf-8" />
-
-        {# Compatibility #}
-        <meta
-            http-equiv="X-UA-Compatible"
-            content="IE=edge">
-
-        {# Viewport #}
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0">
-
-        {# Generic Google Fonts #}
-        <link
-            href="https://fonts.googleapis.com/css?family=Euphoria+Script|Open+Sans:400,400i,600,600i,800,800i&amp;subset=latin-ext"
-            rel="stylesheet">
-
-        {# Material Icons #}
-        <link
-            href="https://fonts.googleapis.com/icon?family=Material+Icons"
-            rel="stylesheet">
-
-        {# Your CSS #}
-        <link 
-            async 
-            href="$ROOT/css/app.css"
-            rel="stylesheet">
-
-        {# Favicons #}
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-        <link rel="manifest" href="/site.webmanifest">
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#b91d47">
-        <meta name="msapplication-TileColor" content="#b91d47">
-        <meta name="theme-color" content="#b91d47">
-
-    </head>
-
-    {# Playground's Body #}
-    <body data-clone>
-
-        <div data-c-visibility="hidden">
-            {# {% include "templates/repeaters/legal-name.twig" %} #}
-        </div>
-
-        <header data-c-overlay="black(90)" data-c-padding="tb(3)" style="background-image: url('https://images.unsplash.com/photo-1545091154-2d7904ef24a3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80');">
-            <div data-c-container="large">
-                <h1 data-c-heading="h1">Security Screening Application and Consent Form Demo</h1>
-                <p data-c-margin="top(1)" data-c-color="white">Please note that this is a demo. This form is not functional and represents a potential digitized format.</p>
-                <div data-c-color="white" data-c-margin="top(2)">
-                    <nav
-                        aria-label="breadcrumb"
-                        data-c-breadcrumbs>
-                        <ol>
-                            <li>
-                                <a
-                                    href="https://talent.canada.ca"
-                                    title="This is the title of the page link."
-                                    target="_blank">
-                                    Talent Cloud</a>
-                                <i>/</i>
-                            </li>
-                            <li>
-                                <span aria-current="page">Security Screening Application and Consent Form</span>
-                                <i>/</i>
-                            </li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
-        </header>
-
-        <div class="gradient" data-c-padding="tb(1)">
-            <div data-c-container="large" data-c-align="base(center)">
-                <p data-c-color="white">Unsure which security form you should be completing? <a href="canada.ca" title="Learn about other types of security forms." target="_blank">Learn more here</a>.</p>
-            </div>
-        </div>
-
-        <div data-c-padding="bottom(triple)">
-            <div data-c-container="large">
-                <div data-c-grid="gutter">
-                    <div data-c-grid-item="tl(1of4) ds(1of5)" class="sidebar-wrapper">
-                        <div class="sidebar" data-c-padding="tb(triple)">
-                            <span data-c-font-weight="bold" data-c-font-size="h4">On this page:</span>
-                            <nav data-c-margin="top(normal)">
-                                <ul>
-                                    <li class="sidebar-complete" id="navBegin">
-                                        <a href="#before" title="">Before You Begin</a>
-                                    </li>
-                                    <li class="sidebar-complete hidden" id="navConsent">
-                                        <i class="material-icons">error</i>
-                                        <i class="material-icons">warning</i>
-                                        <i class="material-icons">check_circle</i>
-                                        <a href="#consent" title="">Consent &amp; Verification</a>
-                                    </li>
-                                    <li class="sidebar-incomplete hidden" id="navBackground">
-                                        <i class="material-icons">error</i>
-                                        <i class="material-icons">warning</i>
-                                        <i class="material-icons">check_circle</i>
-                                        <a href="#background" title="">Background Information</a>
-                                    </li>
-                                    <li class="sidebar-error hidden" id="navResidence">
-                                        <i class="material-icons">error</i>
-                                        <i class="material-icons">warning</i>
-                                        <i class="material-icons">check_circle</i>
-                                        <a href="#residence" title="">Residence</a>
-                                    </li>
-                                    <li class="sidebar-incomplete hidden" id="navExperience">
-                                        <i class="material-icons">error</i>
-                                        <i class="material-icons">warning</i>
-                                        <i class="material-icons">check_circle</i>
-                                        <a href="#experience" title="">Professional Background</a>
-                                    </li>
-                                    <li class="sidebar-incomplete hidden" id="navReferences">
-                                        <i class="material-icons">error</i>
-                                        <i class="material-icons">warning</i>
-                                        <i class="material-icons">check_circle</i>
-                                        <a href="#references" title="">Personal References</a>
-                                    </li>
-                                    <li class="sidebar-incomplete hidden" id="navEducation">
-                                        <i class="material-icons">error</i>
-                                        <i class="material-icons">warning</i>
-                                        <i class="material-icons">check_circle</i>
-                                        <a href="#education" title="">Education &amp; Designations</a>
-                                    </li>
-                                    <li class="sidebar-incomplete hidden" id="navRecord">
-                                        <i class="material-icons">error</i>
-                                        <i class="material-icons">warning</i>
-                                        <i class="material-icons">check_circle</i>
-                                        <a href="#record" title="">Criminal Record</a>
-                                    </li>
-                                    <li class="sidebar-incomplete hidden" id="navProNot">
-                                        <i class="material-icons">error</i>
-                                        <i class="material-icons">warning</i>
-                                        <i class="material-icons">check_circle</i>
-                                        <a href="#proNot" title="">Proactive Notification</a>
-                                    </li>
-                                    <li class="sidebar-incomplete hidden" id="navMaritalStatus">
-                                        <i class="material-icons">error</i>
-                                        <i class="material-icons">warning</i>
-                                        <i class="material-icons">check_circle</i>
-                                        <a href="#maritalStatus" title="">Marital Status</a>
-                                    </li>
-                                    <li class="sidebar-incomplete hidden" id="navRoommates">
-                                        <i class="material-icons">error</i>
-                                        <i class="material-icons">warning</i>
-                                        <i class="material-icons">check_circle</i>
-                                        <a href="#roommates" title="">Roommates / Cohabitants</a>
-                                    </li>
-                                    <li class="sidebar-incomplete hidden" id="navRelatives">
-                                        <i class="material-icons">error</i>
-                                        <i class="material-icons">warning</i>
-                                        <i class="material-icons">check_circle</i>
-                                        <a href="#relatives" title="">Immediate Relatives</a>
-                                    </li>
-                                    <li class="sidebar-complete hidden" id="navTravel">
-                                        <i class="material-icons">error</i>
-                                        <i class="material-icons">warning</i>
-                                        <i class="material-icons">check_circle</i>
-                                        <a href="#travel" title="">Foreign Travel</a>
-                                    </li>
-                                    <li class="sidebar-incomplete hidden" id="navPassports">
-                                        <i class="material-icons">error</i>
-                                        <i class="material-icons">warning</i>
-                                        <i class="material-icons">check_circle</i>
-                                        <a href="#passports" title="">Foreign Passports</a>
-                                    </li>
-                                    <li class="sidebar-incomplete hidden" id="navAssets">
-                                        <i class="material-icons">error</i>
-                                        <i class="material-icons">warning</i>
-                                        <i class="material-icons">check_circle</i>
-                                        <a href="#assets" title="">Foreign Assets</a>
-                                    </li>
-                                    <li class="sidebar-incomplete hidden" id="navSummary">
-                                        <i class="material-icons">error</i>
-                                        <i class="material-icons">warning</i>
-                                        <i class="material-icons">check_circle</i>
-                                        <a href="#summary" title="">Signature</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                            {# <button id="navStartTrigger" data-c-margin="top(double)" data-c-button="solid(c1)" type="button" data-c-radius="rounded">
-                                Upload &amp; Continue
-                            </button> #}
-                            <button id="navSaveTrigger" class="hidden" data-c-margin="top(double)" data-c-button="outline(go)" type="button" data-c-radius="rounded">
-                                Save &amp; Download
-                            </button>
-                        </div>
-                    </div>
-                    <div data-c-grid-item="tl(3of4) ds(4of5)" class="sidebar-content">
-                        <form>
-                            {% include "partials/00-upload.twig" %}
-                            <div data-gc-form-type class="hidden">
-                                <h2 id="before" data-c-margin="top(3) bottom(1)" data-c-heading="h2" data-c-padding="bottom(1)">
-                                    Security Screening/Clearance Selection
-                                </h2>
-                                <div id="selection" data-c-input="radio">
-                                    <label for="clearanceType">I'm applying for:</label>
-                                    <span>Required</span>
-                                    <div id="clearanceType" role="radiogroup">
-                                        <label for="clearanceTypeReliability">
-                                            <input id="clearanceTypeReliability" required name="clearanceType" type="radio" data-gc-status-reliability-trigger/>
-                                            <span>Reliability Status</span>
-                                        </label>
-                                        <label for="clearanceTypeEnhanced">
-                                            <input id="clearanceTypeEnhanced" required name="clearanceType" type="radio" data-gc-status-enhanced-trigger/>
-                                            <span>Enhanced Reliability Status</span>
-                                        </label>
-                                        <label for="clearanceTypeSecret">
-                                            <input id="clearanceTypeSecret" required name="clearanceType" type="radio" data-gc-status-secret-trigger/>
-                                            <span>Secret Security Clearance</span>
-                                        </label>
-                                        <label for="clearanceTypeTop">
-                                            <input id="clearanceTypeTop" required name="clearanceType" type="radio" data-gc-status-top-secret-trigger/>
-                                            <span>Top Secret Security Clearance</span>
-                                        </label>
-                                    </div>
-                                    <span>This input has an error.</span>
-                                </div>
-                            </div>
-                            {% include "partials/01-consent.twig" %}
-                            {% include "partials/02-background-info.twig" %}
-                            {% include "partials/03-residence.twig" %}
-                            {% include "partials/04-experience.twig" %}
-                            {% include "partials/05-references.twig" %}
-                            {% include "partials/06-education.twig" %}
-                            {% include "partials/07-records.twig" %}
-                            {% include "partials/08-notification.twig" %}
-                            {% include "partials/09-marital-status.twig" %}
-                            {% include "partials/10-cohabitants.twig" %}
-                            {% include "partials/11-relatives.twig" %}
-                            {% include "partials/12-foreign-travel.twig" %}
-                            {% include "partials/13-foreign-passports.twig" %}
-                            {% include "partials/14-foreign-assets.twig" %}
-                            {% include "partials/15-summary.twig" %}
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <footer data-c-alignment="base(centre)" data-c-background="grey(10)" data-c-padding="top(double) bottom(double)" data-c-border="top(thin, solid, gray)">
-            <div data-c-container="full">
-                <div data-c-grid="gutter middle">
-                    <div data-c-alignment="tp(left)" data-c-grid-item="tp(5of7)">
-                        <nav class="footer-nav">
+    <div data-c-padding="bottom(triple)">
+        <div data-c-container="base(full, center)">
+            <div data-c-grid="gutter">
+                <div data-c-grid-item="tl(1of4) ds(1of5)" class="sidebar-wrapper">
+                    <div class="sidebar" data-c-padding="tb(triple)">
+                        <span data-c-font-weight="bold" data-c-font-size="h4">On this page:</span>
+                        <nav data-c-margin="top(normal)">
                             <ul>
-                                <li>
-                                    <a
-                                        href="#"
-                                        title="This link is disabled for demo purposes.">
-                                        Feedback
-                                    </a>
+                                <li class="sidebar-complete" id="navBegin">
+                                    <a href="#before" title="">Before You Begin</a>
                                 </li>
-                                <li>
-                                    <a
-                                        href="#"
-                                        title="This link is disabled for demo purposes.">
-                                        Terms &amp; Conditions
-                                    </a>
+                                <li class="sidebar-complete hidden" id="navConsent">
+                                    <i class="material-icons">error</i>
+                                    <i class="material-icons">warning</i>
+                                    <i class="material-icons">check_circle</i>
+                                    <a href="#consent" title="">Consent &amp; Verification</a>
                                 </li>
-                                <li>
-                                    <a
-                                        href="#"
-                                        title="This link is disabled for demo purposes.">
-                                        Privacy Policy
-                                    </a>
+                                <li class="sidebar-incomplete hidden" id="navBackground">
+                                    <i class="material-icons">error</i>
+                                    <i class="material-icons">warning</i>
+                                    <i class="material-icons">check_circle</i>
+                                    <a href="#background" title="">Background Information</a>
                                 </li>
-                                <li>
-                                    <a
-                                        href="#"
-                                        title="This link is disabled for demo purposes.">
-                                        Canada.ca
-                                    </a>
+                                <li class="sidebar-error hidden" id="navResidence">
+                                    <i class="material-icons">error</i>
+                                    <i class="material-icons">warning</i>
+                                    <i class="material-icons">check_circle</i>
+                                    <a href="#residence" title="">Residence</a>
+                                </li>
+                                <li class="sidebar-incomplete hidden" id="navExperience">
+                                    <i class="material-icons">error</i>
+                                    <i class="material-icons">warning</i>
+                                    <i class="material-icons">check_circle</i>
+                                    <a href="#experience" title="">Professional Background</a>
+                                </li>
+                                <li class="sidebar-incomplete hidden" id="navReferences">
+                                    <i class="material-icons">error</i>
+                                    <i class="material-icons">warning</i>
+                                    <i class="material-icons">check_circle</i>
+                                    <a href="#references" title="">Personal References</a>
+                                </li>
+                                <li class="sidebar-incomplete hidden" id="navEducation">
+                                    <i class="material-icons">error</i>
+                                    <i class="material-icons">warning</i>
+                                    <i class="material-icons">check_circle</i>
+                                    <a href="#education" title="">Education &amp; Designations</a>
+                                </li>
+                                <li class="sidebar-incomplete hidden" id="navRecord">
+                                    <i class="material-icons">error</i>
+                                    <i class="material-icons">warning</i>
+                                    <i class="material-icons">check_circle</i>
+                                    <a href="#record" title="">Criminal Record</a>
+                                </li>
+                                <li class="sidebar-incomplete hidden" id="navProNot">
+                                    <i class="material-icons">error</i>
+                                    <i class="material-icons">warning</i>
+                                    <i class="material-icons">check_circle</i>
+                                    <a href="#proNot" title="">Proactive Notification</a>
+                                </li>
+                                <li class="sidebar-incomplete hidden" id="navMaritalStatus">
+                                    <i class="material-icons">error</i>
+                                    <i class="material-icons">warning</i>
+                                    <i class="material-icons">check_circle</i>
+                                    <a href="#maritalStatus" title="">Marital Status</a>
+                                </li>
+                                <li class="sidebar-incomplete hidden" id="navRoommates">
+                                    <i class="material-icons">error</i>
+                                    <i class="material-icons">warning</i>
+                                    <i class="material-icons">check_circle</i>
+                                    <a href="#roommates" title="">Roommates / Cohabitants</a>
+                                </li>
+                                <li class="sidebar-incomplete hidden" id="navRelatives">
+                                    <i class="material-icons">error</i>
+                                    <i class="material-icons">warning</i>
+                                    <i class="material-icons">check_circle</i>
+                                    <a href="#relatives" title="">Immediate Relatives</a>
+                                </li>
+                                <li class="sidebar-complete hidden" id="navTravel">
+                                    <i class="material-icons">error</i>
+                                    <i class="material-icons">warning</i>
+                                    <i class="material-icons">check_circle</i>
+                                    <a href="#travel" title="">Foreign Travel</a>
+                                </li>
+                                <li class="sidebar-incomplete hidden" id="navPassports">
+                                    <i class="material-icons">error</i>
+                                    <i class="material-icons">warning</i>
+                                    <i class="material-icons">check_circle</i>
+                                    <a href="#passports" title="">Foreign Passports</a>
+                                </li>
+                                <li class="sidebar-incomplete hidden" id="navAssets">
+                                    <i class="material-icons">error</i>
+                                    <i class="material-icons">warning</i>
+                                    <i class="material-icons">check_circle</i>
+                                    <a href="#assets" title="">Foreign Assets</a>
+                                </li>
+                                <li class="sidebar-incomplete hidden" id="navSummary">
+                                    <i class="material-icons">error</i>
+                                    <i class="material-icons">warning</i>
+                                    <i class="material-icons">check_circle</i>
+                                    <a href="#summary" title="">Signature</a>
                                 </li>
                             </ul>
-                            <p data-c-colour="grey" data-c-font-size="small" data-c-margin="top(normal)">Date Modified: May 25, 2020</p>
                         </nav>
-                    </div>
-                    <div data-c-alignment="tp(right)" data-c-grid-item="tp(2of7)">
-                        <a class="footer-logo" href="https://canada.ca" target="_blank" title="Government of Canada Logotype" rel="noopener noreferrer">
-                            <img alt="Government of Canada Logotype" class="" src="$ROOT/img/logo_canada_colour.png">
-                        </a>
+                        {# <button id="navStartTrigger" data-c-margin="top(double)" data-c-button="solid(c1)" type="button" data-c-radius="rounded">
+                            Upload &amp; Continue
+                        </button> #}
+                        <button id="navSaveTrigger" class="hidden" data-c-margin="top(double)" data-c-button="outline(go)" type="button" data-c-radius="rounded">
+                            Save &amp; Download
+                        </button>
                     </div>
                 </div>
+                <div data-c-grid-item="tl(3of4) ds(4of5)" class="sidebar-content">
+                    <form>
+                        {% include "partials/00-upload.twig" %}
+                        <div data-gc-form-type class="hidden">
+                            <h2 id="before" data-c-margin="top(3) bottom(1)" data-c-heading="h2" data-c-padding="bottom(1)">
+                                Security Screening/Clearance Selection
+                            </h2>
+                            <div id="selection" data-c-input="radio">
+                                <label for="clearanceType">I'm applying for:</label>
+                                <span>Required</span>
+                                <div id="clearanceType" role="radiogroup">
+                                    <label for="clearanceTypeReliability">
+                                        <input id="clearanceTypeReliability" required name="clearanceType" type="radio" data-gc-status-reliability-trigger/>
+                                        <span>Reliability Status</span>
+                                    </label>
+                                    <label for="clearanceTypeEnhanced">
+                                        <input id="clearanceTypeEnhanced" required name="clearanceType" type="radio" data-gc-status-enhanced-trigger/>
+                                        <span>Enhanced Reliability Status</span>
+                                    </label>
+                                    <label for="clearanceTypeSecret">
+                                        <input id="clearanceTypeSecret" required name="clearanceType" type="radio" data-gc-status-secret-trigger/>
+                                        <span>Secret Security Clearance</span>
+                                    </label>
+                                    <label for="clearanceTypeTop">
+                                        <input id="clearanceTypeTop" required name="clearanceType" type="radio" data-gc-status-top-secret-trigger/>
+                                        <span>Top Secret Security Clearance</span>
+                                    </label>
+                                </div>
+                                <span>This input has an error.</span>
+                            </div>
+                        </div>
+                        {% include "partials/01-consent.twig" %}
+                        {% include "partials/02-background-info.twig" %}
+                        {% include "partials/03-residence.twig" %}
+                        {% include "partials/04-experience.twig" %}
+                        {% include "partials/05-references.twig" %}
+                        {% include "partials/06-education.twig" %}
+                        {% include "partials/07-records.twig" %}
+                        {% include "partials/08-notification.twig" %}
+                        {% include "partials/09-marital-status.twig" %}
+                        {% include "partials/10-cohabitants.twig" %}
+                        {% include "partials/11-relatives.twig" %}
+                        {% include "partials/12-foreign-travel.twig" %}
+                        {% include "partials/13-foreign-passports.twig" %}
+                        {% include "partials/14-foreign-assets.twig" %}
+                        {% include "partials/15-summary.twig" %}
+                    </form>
+                </div>
             </div>
-        </footer>
+        </div>
+    </div>
 
-        <div data-c-dialog-overlay="active"></div>
-        {% include "partials/dialogs/welcome.twig" %}
-        {% include "partials/dialogs/legal-name.twig" %}
-        {% include "partials/dialogs/residence.twig" %}
-        {% include "partials/dialogs/experience.twig" %}
-        {% include "partials/dialogs/reference.twig" %}
-        {% include "partials/dialogs/education.twig" %}
-        {% include "partials/dialogs/recognition.twig" %}
-        {% include "partials/dialogs/record.twig" %}
-        {% include "partials/dialogs/09-current-spouse.twig" %}
-        {% include "partials/dialogs/09-former-spouse.twig" %}
-        {% include "partials/dialogs/10-cohabitant.twig" %}
-        {% include "partials/dialogs/11-relative.twig" %}
-        {% include "partials/dialogs/12-travel.twig" %}
-        {% include "partials/dialogs/13-passport.twig" %}
+    <div data-c-dialog-overlay></div>
+    {# {% include "partials/dialogs/welcome.twig" %} #}
+    {% include "partials/dialogs/legal-name.twig" %}
+    {% include "partials/dialogs/residence.twig" %}
+    {% include "partials/dialogs/experience.twig" %}
+    {% include "partials/dialogs/reference.twig" %}
+    {% include "partials/dialogs/education.twig" %}
+    {% include "partials/dialogs/recognition.twig" %}
+    {% include "partials/dialogs/record.twig" %}
+    {% include "partials/dialogs/09-current-spouse.twig" %}
+    {% include "partials/dialogs/09-former-spouse.twig" %}
+    {% include "partials/dialogs/10-cohabitant.twig" %}
+    {% include "partials/dialogs/11-relative.twig" %}
+    {% include "partials/dialogs/12-travel.twig" %}
+    {% include "partials/dialogs/13-passport.twig" %}
 
-        {# Clone's JavaScript #}
-        <script src="$ROOT/js/clone/clone.min.js"></script>
-
-        {# Your JavaScript #}
-        <script src="$ROOT/js/app.js"></script>
-
-    </body>
-
-</html>
+{% endblock %}

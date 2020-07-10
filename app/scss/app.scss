@@ -360,4 +360,10 @@ $clone-grid-columns: 12;
             top: 0;
         }
 
+        .tc-inline-leaf {
+            margin-right: .5rem;
+            max-width: 2rem;
+            vertical-align: middle;
+        }
+
 }
