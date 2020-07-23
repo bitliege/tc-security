@@ -6,20 +6,26 @@
         <div data-c-grid="gutter(all, 3) top">
             <div data-c-grid-item="base(1of1) tl(3of5)">
                 <p>{{ purposeDescription }}</p>
+                <p data-c-margin="top(1)" data-c-font-weight="bold">This demo has not yet been finalized or approved for use.</p>
                 <div data-c-grid="gutter(all, 1)">
                     <div data-c-grid-item="base(1of1) tl(1of2)">
-                        <p 
-                            data-c-font-weight="bold"
-                            data-c-margin="top(2)">What this demo <span data-c-color="go">does do</span>:</p>
-                        <p data-c-margin="top(1)">Coming soon!</p>
+                        <p data-c-margin="top(2)">What this demo <span data-c-font-weight="bold" data-c-color="go">does do</span>:</p>
+                        <ul data-c-margin="top(1)">
+                            {% for item in does %}
+                                <li>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
                     </div>
                     <div data-c-grid-item="base(1of1) tl(1of2)">
-                        <p 
-                            data-c-font-weight="bold"
-                            data-c-margin="top(2)">What this demo <span data-c-color="stop">does not do</span>:</p>
-                        <p data-c-margin="top(1)">Coming soon!</p>
+                        <p data-c-margin="top(2)">What this demo <span data-c-font-weight="bold" data-c-color="stop">does not do</span>:</p>
+                        <ul data-c-margin="top(1)">
+                            {% for item in doesNot %}
+                                <li>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
                     </div>
                 </div>
+                <p data-c-margin="top(2)">If you have any questions or comments, please <a href="mailto:paul.krisciunas@tbs-sct.gc.ca" title="Email us with your feedback!">contact us via email</a>.</p>
             </div>
             <div data-c-grid-item="base(1of1) tl(2of5)">
                 <div

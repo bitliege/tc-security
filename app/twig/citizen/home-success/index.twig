@@ -20,6 +20,19 @@
     {% include "../../components/home.twig" with {
         "purposeTitle": "Purpose of the Security Screening Application Demo",
         "purposeDescription": "As a citizen, this portal represents what it might be like to register, login, complete, save, and submit an application to receive security clearance with the Government of Canada.",
+        "does": [
+            "simulate registration with email verification and 2-factor authentication",
+            "simulate the login process post-registration",
+            "simulate the look and feel of a digitized security form using fake data",
+            "simulate managing your account",
+            "simulate reviewing comments returned to you about your application"
+        ],
+        "doesNot": [
+            "allow you to enter your own information into forms",
+            "save any data",
+            "allow you to submit an application",
+            "reflect final copy/content"
+        ],
         "toolsTitle": "My Info and Tools",
         "toolsDescription": "Below is a list of handy links that allow you to access your information and tools.",
         "tools": [

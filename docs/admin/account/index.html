@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        
+        <title>Cassandra's Account | Security Screening Application and Consent Form Demo</title>
+        
+        
+        <meta charset="utf-8" />
+
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        <link href="https://fonts.googleapis.com/css?family=Euphoria+Script|Open+Sans:400,400i,600,600i,800,800i&amp;subset=latin-ext" rel="stylesheet">
+
+        
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet">
+
+        
+        <link async href="/tc-security/css/app.css" rel="stylesheet">
+
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#b91d47">
+        <meta name="msapplication-TileColor" content="#b91d47">
+        <meta name="theme-color" content="#b91d47">
+
+    </head>
+
+    
+    <body data-clone>
+
+        
+    
+<div data-c-padding="tb(1)">
+    <div data-c-container="base(full, center)">
+        <div data-c-grid="gutter(1, all) middle">
+            <div 
+                data-c-align="base(center) tp(left)"
+                data-c-grid-item="base(1of1) tp(1of2)">
+                <a 
+                    class="tc-header-gov-logo"
+                    href="https://canada.ca"
+                    target="_blank"
+                    title="Visit Canada.ca.">
+                    <img 
+                        alt=""
+                        src="/tc-security/img/logo-gov-can.svg">
+                </a>
+            </div>
+            <div
+                data-c-align="base(center) tp(right)" 
+                data-c-grid-item="base(1of1) tp(1of2)">
+                <span
+                    data-c-font-style="underline">Français</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<header class="gradient">
+    
+    
+    <div data-c-padding="top(4) bottom(3)">
+        <div data-c-container="base(full, center)">
+            <h1 data-c-heading="h1">My Account Information</h1>
+            
+                <p 
+                    data-c-color="white"
+                    data-c-margin="top(1)">Please note that this application is a prototype and is not ready to be used in production.</p>
+            
+            <div data-c-padding="top(3)">
+                <div data-c-grid="gutter(all, 3) middle">
+                    <div
+                        data-c-align="base(center) tl(left)" 
+                        data-c-grid-item="base(1of1) tl(2of3)">
+                        <nav 
+                            aria-label="breadcrumb"
+                            data-c-breadcrumbs
+                            data-c-color="white">
+                            <ol>
+                                
+                                    <li>
+                                        
+                                            <a 
+                                                href="/tc-security/" 
+                                                title="Return to the demo's homepage.">Demo Home</a><i>/</i>
+                                        
+                                    </li>
+                                
+                                    <li>
+                                        
+                                            <a 
+                                                href="/tc-security/admin/home-success/" 
+                                                title="Return to the security advisor's homepage.">Security Advisor Home</a><i>/</i>
+                                        
+                                    </li>
+                                
+                                    <li>
+                                        
+                                            <a 
+                                                href="/tc-security/admin/account/" 
+                                                title="Return to your account page.">My Account</a><i>/</i>
+                                        
+                                    </li>
+                                
+                            </ol>
+                        </nav>
+                    </div>
+                    <div
+                        data-c-align="base(center) tl(right)"
+                        data-c-grid-item="base(1of1) tl(1of3)">
+                        <p 
+                            data-c-color="white"
+                            data-c-font-weight="bold">DEMO</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+    <div data-c-padding="bottom(3)">
+        <div data-c-container="base(full, center)">
+            <div data-c-grid="gutter(all, 1)">
+                <div 
+                    class="sidebar-wrapper"
+                    data-c-grid-item="tl(1of4) ds(1of5)">
+                    <div class="sidebar" data-c-padding="tb(3)">
+                        <span data-c-font-weight="bold" data-c-font-size="h4">On this page:</span>
+                        <nav data-c-margin="top(normal)">
+                            <ul>
+                                <li class="sidebar-complete" id="navBegin">
+                                    <a href="#basics" title="">My Basic Information</a>
+                                </li>
+                                <li class="sidebar-complete" id="navBegin">
+                                    <a href="#password" title="">My Password</a>
+                                </li>
+                                <li class="sidebar-complete" id="navBegin">
+                                    <a href="#2fa" title="">My 2-factor Authentication</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div data-c-grid-item="tl(3of4) ds(4of5)">
+                    <div data-c-container="base(medium, left)">
+                        <div data-c-grid="gutter(all, 1)">
+                            
+                            <div data-c-grid-item="base(1of1)">
+                                <h2 
+                                    data-c-font-size="h2"
+                                    data-c-padding="top(3)">Welcome to your account settings, Cassandra.</h2>
+                                <p data-c-margin="tb(1)">Below, you'll be able to manage your settings, reset your password, and update your 2-factor authentication information.</p>
+                                <h3
+                                    data-c-heading="h3"
+                                    data-c-padding="top(3)"
+                                    id="basics">My Basic Information</h3>
+                            </div>
+                            <div
+                                data-c-grid-item="base(1of1) tl(1of2)" 
+                                data-c-input="text">
+                                <label for="TI2">My First Name</label>
+                                <span>Required</span>
+                                <div>
+                                    <input id="TI2" placeholder="e.g. Clark" type="text" value="Cassandra" />
+                                </div>
+                                <span>This input has an error.</span>
+                            </div>
+                            <div
+                                data-c-grid-item="base(1of1) tl(1of2)" 
+                                data-c-input="text">
+                                <label for="TI2">My Last Name</label>
+                                <span>Required</span>
+                                <div>
+                                    <input id="TI2" placeholder="e.g. Kent" type="text" value="Goodwill" />
+                                </div>
+                                <span>This input has an error.</span>
+                            </div>
+                            <div data-c-grid-item="base(1of1)">
+                                <p data-c-margin="bottom(1)">Please note that changing your email will prompt a verification email to be sent to the new email provided, as well as an email notifying your old email address of the change.</p>
+                            </div>
+                            <div 
+                                data-c-grid-item="base(1of1)"
+                                data-c-input="email">
+                                <label for="EM2">My Government of Canada Email</label>
+                                <span>Required</span>
+                                <div>
+                                    <input id="EM2" placeholder="e.g. first.last@department.gc.ca, first.last@canada.ca" type="email" value="cassandra.goodwill@canada.ca"/>
+                                </div>
+                                <span>This input has an error.</span>
+                            </div>
+                            <div data-c-grid-item="base(1of1)">
+                                <p data-c-margin="bottom(1)"><span data-c-font-weight="bold">My Department</span>: Employment and Social Development Canada</p>
+                                <p data-c-margin="bottom(1)">For security purposes, users cannot change their active department manually. Please contact our administrators to request a change. This helps us ensure that advisors only have access to the appropriate information for their department.</p>
+                            </div>
+                            <div
+                                data-c-align="base(right)" 
+                                data-c-grid-item="base(1of1)">
+                                <a
+                                    data-c-button="solid(c1)"
+                                    data-c-radius="rounded"
+                                    href="#"
+                                    title="">Save My Changes</a>
+                            </div>
+                            
+                            <div data-c-grid-item="base(1of1)">
+                                <h3
+                                    data-c-heading="h3"
+                                    data-c-padding="top(3)"
+                                    id="password">My Password</h3>
+                                <p data-c-margin="top(1) bottom(.5)">Please create a password that meets the following criteria:</p>
+                                <ul data-c-margin="bottom(1)">
+                                    <li>contains at least 15 characters</li>
+                                    <li>uses at least one lowercase letter</li>
+                                    <li>uses at least one uppercase letter</li>
+                                    <li>uses at least one number</li>
+                                    <li>uses at least one of these symbols: !, @, #, $, %, ^, &amp;, *</li>
+                                </ul>
+                            </div>
+                            <div
+                                data-c-grid-item="base(1of1)" 
+                                data-c-input="password">
+                                <label for="p2">My Current Password</label>
+                                <span>Required</span>
+                                <div>
+                                    <input id="p2" required type="password" />
+                                    <button type="button">
+                                        <i class="material-icons">
+                                            visibility
+                                        </i>
+                                        <i class="material-icons">
+                                            visibility_off
+                                        </i>
+                                    </button>
+                                </div>
+                                <span>This input has an error.</span>
+                            </div>
+                            <div
+                                data-c-grid-item="base(1of1) tl(1of2)" 
+                                data-c-input="password">
+                                <label for="p2">My New Password</label>
+                                <span>Required</span>
+                                <div>
+                                    <input id="p2" required type="password" />
+                                    <button type="button">
+                                        <i class="material-icons">
+                                            visibility
+                                        </i>
+                                        <i class="material-icons">
+                                            visibility_off
+                                        </i>
+                                    </button>
+                                </div>
+                                <span>This input has an error.</span>
+                            </div>
+                            <div
+                                data-c-grid-item="base(1of1) tl(1of2)" 
+                                data-c-input="password">
+                                <label for="p2">Confirm Password</label>
+                                <span>Required</span>
+                                <div>
+                                    <input id="p2" required type="password" />
+                                    <button type="button">
+                                        <i class="material-icons">
+                                            visibility
+                                        </i>
+                                        <i class="material-icons">
+                                            visibility_off
+                                        </i>
+                                    </button>
+                                </div>
+                                <span>This input has an error.</span>
+                            </div>
+                            <div
+                                data-c-align="base(right)" 
+                                data-c-grid-item="base(1of1)">
+                                <a
+                                    data-c-button="solid(c1)"
+                                    data-c-radius="rounded"
+                                    href="#"
+                                    title="">Change My Password</a>
+                            </div>
+                            
+                            <div data-c-grid-item="base(1of1)">
+                                <h3
+                                    data-c-heading="h3"
+                                    data-c-padding="top(3)"
+                                    id="2fa">My 2-factor Authentication</h3>
+                                <p 
+                                    data-c-font-weight="bold"
+                                    data-c-margin="tb(1)">2-factor Status: <span data-c-color="go">Turned On</span></p>
+                                <div data-c-accordion-group>
+                                    <div data-c-accordion data-c-card data-c-border="left(thick, solid, c1)">
+                                        <button aria-expanded="false" data-c-accordion-trigger tabindex="0" type="button">
+                                            <div data-c-padding="all(1)">
+                                                <p data-c-color="c1">2-factor Recovery Codes</p>
+                                            </div>
+                                            <span data-c-visibility="invisible">Click to view...</span>
+                                            <i aria-hidden="true" data-c-accordion-add data-c-colour="c1" data-c-font-size="h3" data-c-font-weight="bold">+</i>
+                                            <i aria-hidden="true" data-c-accordion-remove data-c-colour="c1" data-c-font-size="h3" data-c-font-weight="bold">-</i>
+                                        </button>
+                                        <div aria-hidden="true" data-c-accordion-content data-c-padding="rl(1)">
+                                            <div data-c-padding="bottom(1)">
+                                                <p data-c-margin="bottom(1)">These codes allow you to bypass your second factor in the event you lose access to it. Please note that each of these codes can only be used once. Resetting your 2-factor authenticator using the button below will also generate new codes.</p>
+                                                <div data-c-grid="gutter(all, 1)">
+                                                    <div data-c-grid-item="base(1of2)">
+                                                        <p>sfdg7-5sdf3-km234-dfs21</p>
+                                                    </div>
+                                                    <div data-c-grid-item="base(1of2)">
+                                                        <p>a453d-bhhj5-sd34d-hjr43</p>
+                                                    </div>
+                                                    <div data-c-grid-item="base(1of2)">
+                                                        <p>vsf98-sdf31-hdl12-asdf5</p>
+                                                    </div>
+                                                    <div data-c-grid-item="base(1of2)">
+                                                        <p>xc987-o34sd-lkj21-jkl52</p>
+                                                    </div>
+                                                    <div data-c-grid-item="base(1of2)">
+                                                        <p>x9786-dsg53-vsf87-dfk21</p>
+                                                    </div>
+                                                    <div data-c-grid-item="base(1of2)">
+                                                        <p>xfdgs-335ds-234hs-4654f</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p data-c-margin="tb(1)">Using the button below, you can reset your 2-factor authenticator. This will temporarily disable it and walk you through the process of setting a new one up. Please ensure that if you begin this process you complete the setup to avoid losing access to your account.</p>
+                            </div>
+                            <div
+                                data-c-align="base(right)" 
+                                data-c-grid-item="base(1of1)">
+                                <a
+                                    data-c-button="solid(c1)"
+                                    data-c-radius="rounded"
+                                    href="#"
+                                    title="">Reset My Authenticator</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        <footer 
+    data-c-alignment="base(centre)" 
+    data-c-background="grey(10)" 
+    data-c-border="tb(thin, solid, gray)"
+    data-c-padding="top(double) bottom(double)">
+    <div data-c-container="full">
+        <div data-c-grid="gutter middle">
+            <div 
+                data-c-alignment="tp(left)" 
+                data-c-grid-item="tp(5of7)">
+                <nav class="footer-nav">
+                    <ul>
+                        <li>
+                            <a
+                                href="#"
+                                title="This link is disabled for demo purposes.">
+                                Feedback
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="#"
+                                title="This link is disabled for demo purposes.">
+                                Terms &amp; Conditions
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="#"
+                                title="This link is disabled for demo purposes.">
+                                Privacy Policy
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="#"
+                                title="This link is disabled for demo purposes.">
+                                Canada.ca
+                            </a>
+                        </li>
+                    </ul>
+                    <p 
+                        data-c-colour="gray"
+                        data-c-font-size="small" 
+                        data-c-margin="top(normal)">Date Modified: May 25, 2020</p>
+                </nav>
+            </div>
+            <div 
+                data-c-alignment="tp(right)" 
+                data-c-grid-item="tp(2of7)">
+                <a 
+                    class="footer-logo" 
+                    href="https://canada.ca" 
+                    target="_blank" 
+                    title="Government of Canada Logotype" 
+                    rel="noopener noreferrer">
+                    <img 
+                        alt="Government of Canada Logotype"
+                        src="/tc-security/img/logo_canada_colour.png">
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+        <script src="/tc-security/js/clone/clone.min.js"></script>
+
+        
+        <script src="/tc-security/js/app.js"></script>
+
+    </body>
+
+</html>

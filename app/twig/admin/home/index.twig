@@ -20,6 +20,19 @@
     {% include "../../components/home.twig" with {
         "purposeTitle": "Purpose of the Security Advisor Portal",
         "purposeDescription": "As a security advisor, this portal represents what it might be like to register, login, and view security applications submitted by applicants who are entering the Federal Public Service.",
+        "does": [
+            "simulate registration with email verification and 2-factor authentication",
+            "simulate the login process post-registration",
+            "simulate an area to review and download a security clearance application",
+            "simulate approving/denying an application",
+            "simulate managing your account"
+        ],
+        "doesNot": [
+            "allow you to enter your own information into forms",
+            "save any data",
+            "allow you to submit an application approval/denial",
+            "reflect final copy/content"
+        ],
         "toolsTitle": "Get Started",
         "toolsDescription": "To get going, please register for a new account, or login with an existing account.",
         "tools": [

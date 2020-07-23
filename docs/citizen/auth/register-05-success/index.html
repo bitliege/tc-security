@@ -134,8 +134,48 @@
         <div data-c-container="base(medium, center)">
             <form data-c-grid="gutter(all, 1)">
                 <div data-c-grid-item="base(1of1)">
-                    <h2 data-c-font-size="h2">Great work! You're ready to start an application.</h2>
+                    <h2 data-c-font-size="h2">Great work! Before you go...</h2>
                     <p data-c-margin="tb(1)">Thanks Jason, you've successfully registered to the security screening application portal. From here, you can begin an application by selecting "Create or Edit a Security Application" from the homepage.</p>
+                    <p data-c-margin="tb(1)">Below are a series of recovery codes generated for your 2-factor authentication. These codes allow you to bypass your second factor in the event you lose access to it. Please note that each of these codes can only be used once. Resetting your 2-factor authenticator using the button below will also generate new codes.</p>
+                    <p 
+                        data-c-color="stop"
+                        data-c-margin="tb(1)">Print or save these codes in a safe place!</p>
+                    <div data-c-accordion-group>
+                        <div data-c-accordion data-c-card data-c-border="left(thick, solid, c1)">
+                            <button aria-expanded="false" data-c-accordion-trigger tabindex="0" type="button">
+                                <div data-c-padding="all(1)">
+                                    <p data-c-color="c1">2-factor Recovery Codes</p>
+                                </div>
+                                <span data-c-visibility="invisible">Click to view...</span>
+                                <i aria-hidden="true" data-c-accordion-add data-c-colour="c1" data-c-font-size="h3" data-c-font-weight="bold">+</i>
+                                <i aria-hidden="true" data-c-accordion-remove data-c-colour="c1" data-c-font-size="h3" data-c-font-weight="bold">-</i>
+                            </button>
+                            <div aria-hidden="true" data-c-accordion-content data-c-padding="rl(1)">
+                                <div data-c-padding="bottom(1)">
+                                    <div data-c-grid="gutter(all, 1)">
+                                        <div data-c-grid-item="base(1of2)">
+                                            <p>sfdg7-5sdf3-km234-dfs21</p>
+                                        </div>
+                                        <div data-c-grid-item="base(1of2)">
+                                            <p>a453d-bhhj5-sd34d-hjr43</p>
+                                        </div>
+                                        <div data-c-grid-item="base(1of2)">
+                                            <p>vsf98-sdf31-hdl12-asdf5</p>
+                                        </div>
+                                        <div data-c-grid-item="base(1of2)">
+                                            <p>xc987-o34sd-lkj21-jkl52</p>
+                                        </div>
+                                        <div data-c-grid-item="base(1of2)">
+                                            <p>x9786-dsg53-vsf87-dfk21</p>
+                                        </div>
+                                        <div data-c-grid-item="base(1of2)">
+                                            <p>xfdgs-335ds-234hs-4654f</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <p data-c-margin="tb(1)">It's important to note that this application works a little differently than you might be used to. In order to give you control over your own data, we use a file upload/download process to allow you to edit your application. This means that instead of saving your application to a server, whenever you're ready to take a break or submit a final copy, we'll ask you to download a file. When you're ready to continue on, you can simply upload the same file back into the tool and all your information will magically appear.</p>
                     <p data-c-margin="tb(1)"><a href="#" title="Learn more about how we keep your information safe.">Want to learn more about how we're taking steps to keep your data private? Click here to find out more about how this application works.</a></p>
                 </div>
@@ -151,7 +191,7 @@
                         data-c-button="solid(c1)"
                         data-c-radius="rounded"
                         href="/tc-security/citizen/home-success/"
-                        title="">Let's Go!</a>
+                        title="">I've Saved My Codes</a>
                 </div>
             </form>
         </div>
