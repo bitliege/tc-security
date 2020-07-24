@@ -1,0 +1,31 @@
+{% extends "../../components/layout.twig" %}
+{% block siteTitle %}Jason's Account{% endblock %}
+{% block content %}
+    {% include "../../components/header.twig" with {
+        "title": "My Account Information",
+        "subtitle": "Please note that this application is a prototype and is not ready to be used in production.",
+        "breadcrumbs": [
+            {
+                "label": "Demo Home",
+                "link": "$ROOT/",
+                "title": "Return to the demo's homepage."
+            },
+            {
+                "label": "Applicant Home",
+                "link": "$ROOT/citizen/home-success/",
+                "title": "Return to the applicant homepage."
+            },
+            {
+                "label": "My Account",
+                "link": "$ROOT/citizen/account/",
+                "title": "Return to your account page."
+            }
+        ]
+    } %}
+    {% include "../../components/account.twig" with {
+        "role": "citizen",
+        "firstName": "Jason",
+        "lastName": "Bergeron",
+        "email": "jason.bergeron@email.com"
+    } %}
+{% endblock %}
