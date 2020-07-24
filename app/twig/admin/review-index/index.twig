@@ -30,7 +30,7 @@
                 data-c-margin="top(1)">
                 <p>Below you will find a list of applications you've chosen to review, as well as applications that are awaiting assignment to an advisor. You can claim a screening application by clicking the "Claim and Decrypt" button. Once you're the assigned advisor for an application, you can view the contents of the application by clicking on it in the list.</p>
             </div>
-            {% include "../../components/application.twig" with {
+            {% include "../../components/application-item-advisor.twig" with {
                 "title": "My Screening Applications",
                 "applications": [
                     {
@@ -65,7 +65,7 @@
                     }
                 ]
             } %}
-            {% include "../../components/application.twig" with {
+            {% include "../../components/application-item-advisor.twig" with {
                 "title": "Unassigned Screening Applications",
                 "applications": [
                     {

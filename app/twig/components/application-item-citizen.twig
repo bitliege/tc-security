@@ -1,0 +1,78 @@
+{% for application in applications %}
+    <div
+        data-c-card
+        data-c-margin="top(.5)"
+        {% if application.status == "Denied" %}
+            data-c-border="left(thick, solid, stop)"
+        {% elseif application.status == "Approved" %}
+            data-c-border="left(thick, solid, go)"
+        {% endif %}>
+        <div data-c-padding="all(1)">
+            <div data-c-grid="gutter(all, 1) middle">
+                <div data-c-grid-item="base(1of1) tl(1of4)">
+                    <p data-c-font-weight="bold">{{ application.clearance }} Application</p>
+                    <p>{{ application.department }}</p>
+                </div>
+                <div data-c-grid-item="base(1of1) tl(1of4)">
+                    <p data-c-font-weight="bold">Submitted on:</p>
+                    <p>{{ application.submissionDate }}</p>
+                </div>
+                {% if application.state == "reviewed" or application.state == "archived" %}
+                    <div data-c-grid-item="base(1of1) tl(1of4)">
+                {% else %}
+                    <div data-c-grid-item="base(1of1) tl(2of4)">
+                {% endif %}
+                    <p data-c-font-weight="bold">Status:</p>
+                    {% if application.status == "Awaiting Assignment" %}
+                        <p data-c-color="gray">
+                    {% elseif application.status == "Approved" %}
+                        <p data-c-color="go">
+                    {% elseif application.status == "Denied" %}
+                        <p data-c-color="stop">
+                    {% endif %}
+                        {{ application.status }}
+                    </p>
+                </div>
+                {% if application.state == "reviewed" %}
+                    <div 
+                        data-c-align="base(center) tl(right)"
+                        data-c-grid-item="base(1of1) tl(1of4)">
+                        <button
+                            data-c-button="outline(c1)"
+                            data-c-radius="rounded">
+                            Archive Feedback
+                        </button>
+                    </div>
+                {% endif %}
+                {% if application.state == "archived" %}
+                    <div 
+                        data-c-align="base(center) tl(right)"
+                        data-c-grid-item="base(1of1) tl(1of4)">
+                        <button
+                            data-c-button="outline(c1)"
+                            data-c-radius="rounded">
+                            Delete Feedback
+                        </button>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+        {% if application.notes != null %}
+            <div
+                data-c-background="gray(10)" 
+                data-c-padding="all(1)">
+                <div data-c-grid="gutter(all, 1) middle">
+                    <div data-c-grid-item="base(1of1)">
+                        <p data-c-font-weight="bold">Feedback</p>
+                        <p>Please review the following feedback and resubmit your application if applicable.</p>
+                        <ul data-c-margin="top(.5)">
+                            {% for note in application.notes %}
+                                <li>{{ note }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+{% endfor %}

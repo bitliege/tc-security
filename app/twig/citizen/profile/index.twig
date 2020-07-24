@@ -1,0 +1,72 @@
+{% extends "../../components/layout.twig" %}
+{% block siteTitle %}Jason's Application Feedback{% endblock %}
+{% block content %}
+    {% include "../../components/header.twig" with {
+        "title": "My Application Feedback",
+        "subtitle": "Please note that this application is a prototype and is not ready to be used in production.",
+        "breadcrumbs": [
+            {
+                "label": "Demo Home",
+                "link": "$ROOT/",
+                "title": "Return to the demo's homepage."
+            },
+            {
+                "label": "Applicant Home",
+                "link": "$ROOT/citizen/home-success/",
+                "title": "Return to the applicant homepage."
+            },
+            {
+                "label": "My Application Feedback",
+                "link": "$ROOT/citizen/profile/",
+                "title": "Return to your feedback page."
+            }
+        ]
+    } %}
+    <div data-c-padding="bottom(3)">
+        <div data-c-container="base(full, center)">
+            <h2
+                data-c-font-size="h2"
+                data-c-margin="bottom(1)"
+                data-c-padding="top(3)">Pending Applications</h2>
+            {% include "../../components/application-item-citizen.twig" with {
+                "applications": [
+                    {
+                        "state": "pending",
+                        "clearance": "Secret",
+                        "department": "Treasury Board of Canada Secretariat",
+                        "submissionDate": "2020/MAR/03",
+                        "status": "Awaiting Assignment",
+                        "notes": null
+                    },
+                    {
+                        "state": "reviewed",
+                        "clearance": "Enhanced Reliability",
+                        "department": "Employment and Social Development Canada",
+                        "submissionDate": "2020/JAN/14",
+                        "status": "Denied",
+                        "notes": [
+                            "Paperwork confirming your citizenship in South Africa was not sent along with the application. Please include one of the following: a copy of your South African passport or birth certificate.",
+                            "We were unable to contact your mother at the contact information provided. Please ensure it is correct."
+                        ]
+                    }
+                ]
+            } %}
+            <h2
+                data-c-font-size="h2"
+                data-c-margin="bottom(1)"
+                data-c-padding="top(3)">Archived Applications</h2>
+            {% include "../../components/application-item-citizen.twig" with {
+                "applications": [
+                    {
+                        "state": "archived",
+                        "clearance": "Reliability",
+                        "department": "Treasury Board of Canada Secretariat",
+                        "submissionDate": "2012/SEP/04",
+                        "status": "Approved",
+                        "notes": null
+                    }
+                ]
+            } %}
+        </div>
+    </div>
+{% endblock %}
