@@ -1,0 +1,104 @@
+<div
+    aria-hidden="true"
+    aria-describedby="save-quit-dialog-description"
+    aria-labelledby="save-quit-dialog-title"
+    data-c-dialog
+    data-c-dialog-id="save-quit-dialog"
+    data-c-padding="top(double) bottom(double)"
+    role="dialog">
+    <div
+        data-c-background="white(100)"
+        data-c-radius="rounded"
+        data-c-margin="bottom(double)">
+        <div
+            data-c-padding="tb(normal) right(triple) left(normal)"
+            data-c-border="bottom(thin, solid, black)"
+            data-c-background="c1(100)">
+            <h5
+                data-c-font-size="h4"
+                id="save-quit-dialog-title"
+                data-c-dialog-focus data-c-color="white">
+                Save and Continue Later
+            </h5>
+            <p data-c-margin="top(half)" data-c-color="white">Instead of saving your personal information on our system, we ask that you download your application to your device for safe keeping. Please select a password to lock the file. When you upload the file to this site to continue your application, you'll be asked to enter your password.</p>
+            <button
+                data-c-dialog-action="close"
+                data-c-dialog-id="save-quit-dialog"
+                type="button">
+                <i class="material-icons" data-c-color="white">close</i>
+            </button>
+        </div>
+        <div
+            data-c-border="bottom(thin, solid, black)"
+            data-c-padding="normal">
+            <div id="reference-dialog-description">
+                <form data-c-grid="gutter">
+                    <div data-c-grid-item="base(1of1)">
+                        <p data-c-font-weight="bold">Select a Password</p>
+                    </div>
+                    <div 
+                        data-c-grid-item="base(1of1) tl(1of2)"
+                        data-c-input="password">
+                        <label for="p2">My Application Password</label>
+                        <span>Required</span>
+                        <div>
+                            <input id="p2" required type="password" value="G1assesAreTheBestDisguise" />
+                            <button type="button">
+                                <i class="material-icons">
+                                    visibility
+                                </i>
+                                <i class="material-icons">
+                                    visibility_off
+                                </i>
+                            </button>
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    <div 
+                        data-c-grid-item="base(1of1) tl(1of2)"
+                        data-c-input="password">
+                        <label for="p2">Confirm Application Password</label>
+                        <span>Required</span>
+                        <div>
+                            <input id="p2" required type="password" value="G1assesAreTheBestDisguise" />
+                            <button type="button">
+                                <i class="material-icons">
+                                    visibility
+                                </i>
+                                <i class="material-icons">
+                                    visibility_off
+                                </i>
+                            </button>
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- The following dialog actions can be customized depending on the dialog. -->
+        <div data-c-padding="normal">
+            <div data-c-grid="gutter middle">
+                <div data-c-grid-item="base(1of2)">
+                    <button
+                        data-c-button="outline(slow)"
+                        data-c-radius="rounded"
+                        data-c-dialog-action="close"
+                        data-c-dialog-id="save-quit-dialog">
+                        Cancel
+                    </button>
+                </div>
+                <div
+                    data-c-grid-item="base(1of2)"
+                    data-c-alignment="base(right)">
+                    <a
+                        data-c-button="solid(go)"
+                        data-c-radius="rounded"
+                        href="$ROOT/citizen/home-success/"
+                        title="Download your application and return to the homepage.">
+                        Save &amp; Download
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

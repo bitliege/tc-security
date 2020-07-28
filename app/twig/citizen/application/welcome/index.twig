@@ -1,0 +1,63 @@
+{% extends "../../../components/layout.twig" %}
+{% block siteTitle %}Security Screening Application Start Screen{% endblock %}
+{% block content %}
+    {% include "../../../components/header.twig" with {
+        "title": "Welcome to the Security Screening Application",
+        "subtitle": "Please note that this application is a prototype and is not ready to be used in production.",
+        "breadcrumbs": [
+            {
+                "label": "Demo Home",
+                "link": "$ROOT/",
+                "title": "Return to the demo's homepage."
+            },
+            {
+                "label": "Applicant Home",
+                "link": "$ROOT/citizen/home-success/",
+                "title": "Return to the applicant homepage."
+            },
+            {
+                "label": "Application Start Screen",
+                "link": "$ROOT/citizen/application/welcome/",
+                "title": "Return to the application start screen."
+            }
+        ]
+    } %}
+    <div data-c-padding="bottom(3)">
+        <div data-c-container="base(medium, center)">
+            <h2
+                data-c-font-size="h2"
+                data-c-padding="top(3)">Hey Jason, let's get working on an application!</h2>
+            <p data-c-margin="tb(1)">Please select one of the following paths:</p>
+            <div data-c-grid="gutter(all, 1)">
+                <div data-c-grid-item="base(1of1) tp(1of2) equal-col">
+                    <div
+                        data-c-card
+                        data-c-radius="rounded"
+                        data-c-padding="all(1)">
+                        <h3 data-c-heading="h3">Start a New Application</h3>
+                        <p data-c-margin="tb(1)">If you haven't completed an application using this tool before, or you'd like to start an application fresh, select this option.</p>
+                        <a
+                            data-c-button="solid(c1)"
+                            data-c-radius="rounded"
+                            href="$ROOT/citizen/application/form-new/"
+                            title="Start a new application.">Start an Application</a>
+                    </div>
+                </div>
+                <div data-c-grid-item="base(1of1) tp(1of2) equal-col">
+                    <div
+                        data-c-card
+                        data-c-radius="rounded"
+                        data-c-padding="all(1)">
+                        <h3 data-c-heading="h3">Continue an Application</h3>
+                        <p data-c-margin="tb(1)">If you've already begun an application and have the file you were asked to download on your device, select this option.</p>
+                        <a
+                            data-c-button="solid(c1)"
+                            data-c-radius="rounded"
+                            href="$ROOT/citizen/application/resume/"
+                            title="Continue a previous application.">Continue an Application</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

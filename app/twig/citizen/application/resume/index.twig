@@ -1,0 +1,95 @@
+{% extends "../../../components/layout.twig" %}
+{% block siteTitle %}Continue a Security Screening Application{% endblock %}
+{% block content %}
+    {% include "../../../components/header.twig" with {
+        "title": "Continue a Security Screening Application",
+        "subtitle": "Please note that this application is a prototype and is not ready to be used in production.",
+        "breadcrumbs": [
+            {
+                "label": "Demo Home",
+                "link": "$ROOT/",
+                "title": "Return to the demo's homepage."
+            },
+            {
+                "label": "Applicant Home",
+                "link": "$ROOT/citizen/home-success/",
+                "title": "Return to the applicant homepage."
+            },
+            {
+                "label": "Application Start Screen",
+                "link": "$ROOT/citizen/application/resume/",
+                "title": "Return to the application resume screen."
+            }
+        ]
+    } %}
+    <div data-c-padding="bottom(3)">
+        <div data-c-container="base(medium, center)">
+            <h2
+                data-c-font-size="h2"
+                data-c-padding="top(3)">Welcome back!</h2>
+            <p data-c-margin="tb(1)">Use the input below to browse for your application file on your device. Once you've selected it, please enter the password you chose last time you saved and downloaded your document. <a href="#" title="Visit our FAQ to learn more about how we treat your data.">Why don't you save my data on the website?</a></p>
+            <div data-c-grid="gutter(all, 1)">
+                <div
+                    data-c-grid-item="base(1of1)" 
+                    data-c-input="button">
+                    <label for="WB2">Upload My Application</label>
+                    <span>Required</span>
+                    <div data-c-grid>
+                        <input
+                            data-c-grid-item="fit"
+                            id="WB2"
+                            placeholder="e.g. sarah_burkley_reliability.zip"
+                            type="text"
+                            required
+                            value="C:\Users\jason\Documents\jason_bergeron_reliability.zip"/>
+                        <button
+                            data-c-button="solid(c1)"
+                            type="button">
+                            Browse...
+                        </button>
+                    </div>
+                    <span>This input has an error.</span>
+                </div>
+                <div
+                    data-c-grid-item="base(1of1)" 
+                    data-c-input="password">
+                    <label for="p2">Application Password</label>
+                    <span>Required</span>
+                    <div>
+                        <input id="p2" required type="password" value="My-Secr3t-P@ssW0rd"/>
+                        <button type="button">
+                            <i class="material-icons">
+                                visibility
+                            </i>
+                            <i class="material-icons">
+                                visibility_off
+                            </i>
+                        </button>
+                    </div>
+                    <span>This input has an error.</span>
+                </div>
+                <div data-c-grid-item="base(1of1)">
+                    <hr data-c-hr="thin(gray)" data-c-margin="bottom(1)">
+                </div>
+                <div 
+                    data-c-align="base(center) tl(left)"
+                    data-c-grid-item="base(1of1) tl(1of2)">
+                    <a 
+                        data-c-button="outline(c1)"
+                        data-c-radius="rounded"
+                        href="$ROOT/citizen/application/form-new/"
+                        title="">Start a New Application</a>
+                </div>
+                <div 
+                    data-c-align="base(center) tl(right)"
+                    data-c-grid-item="base(1of1) tl(1of2)">
+                    <a 
+                        data-c-button="solid(c1)"
+                        data-c-radius="rounded"
+                        href="$ROOT/citizen/application/form-continued/"
+                        title="">Upload and Continue</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

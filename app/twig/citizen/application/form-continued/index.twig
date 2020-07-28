@@ -1,0 +1,28 @@
+{% extends "../../../components/layout.twig" %}
+{% block siteTitle %}Edit Your Application{% endblock %}
+{% block content %}
+    {% include "../../../components/header.twig" with {
+        "title": "Security Screening Application and Consent Form Demo",
+        "subtitle": "Please note that this application is a prototype and is not ready to be used in production.",
+        "breadcrumbs": [
+            {
+                "label": "Demo Home",
+                "link": "$ROOT/",
+                "title": "Return to the demo's homepage."
+            },
+            {
+                "label": "Applicant Home",
+                "link": "$ROOT/citizen/home-success/",
+                "title": "Return to the applicant homepage."
+            },
+            {
+                "label": "Security Screening Application",
+                "link": "$ROOT/citizen/application/form-continued/",
+                "title": "Edit your existing security screening application."
+            }
+        ]
+    } %}
+    {% include "../../../components/application/form.twig" with {
+        "state": "progress"
+    } %}
+{% endblock %}

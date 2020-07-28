@@ -5,7 +5,7 @@
     <head>
 
         
-        <title>Applicant Home | Security Screening Application and Consent Form Demo</title>
+        <title>Security Screening Application Start Screen | Security Screening Application and Consent Form Demo</title>
         
         
         <meta charset="utf-8" />
@@ -74,7 +74,7 @@
     
     <div data-c-padding="top(4) bottom(3)">
         <div data-c-container="base(full, center)">
-            <h1 data-c-heading="h1">Welcome Back, Jason</h1>
+            <h1 data-c-heading="h1">Welcome to the Security Screening Application</h1>
             
                 <p 
                     data-c-color="white"
@@ -107,6 +107,14 @@
                                         
                                     </li>
                                 
+                                    <li>
+                                        
+                                            <a 
+                                                href="/tc-security/citizen/application/welcome/" 
+                                                title="Return to the application start screen.">Application Start Screen</a><i>/</i>
+                                        
+                                    </li>
+                                
                             </ol>
                         </nav>
                     </div>
@@ -122,95 +130,44 @@
         </div>
     </div>
 </header>
-    <div data-c-padding="tb(3)">
-    <div data-c-container="base(full, center)">
-        <h2 
-            data-c-font-size="h2"
-            data-c-margin="bottom(2)">Purpose of the Security Screening Application Demo</h2>
-        <div data-c-grid="gutter(all, 3) top">
-            <div data-c-grid-item="base(1of1) tl(3of5)">
-                <p>As a citizen, this portal represents what it might be like to register, login, complete, save, and submit an application to receive security clearance with the Government of Canada.</p>
-                <p data-c-margin="top(1)" data-c-font-weight="bold">This demo has not yet been finalized or approved for use.</p>
-                <div data-c-grid="gutter(all, 1)">
-                    <div data-c-grid-item="base(1of1) tl(1of2)">
-                        <p data-c-margin="top(2)">What this demo <span data-c-font-weight="bold" data-c-color="go">does do</span>:</p>
-                        <ul data-c-margin="top(1)">
-                            
-                                <li>simulate registration with email verification and 2-factor authentication</li>
-                            
-                                <li>simulate the login process post-registration</li>
-                            
-                                <li>simulate the look and feel of a digitized security form using fake data</li>
-                            
-                                <li>simulate managing your account</li>
-                            
-                                <li>simulate reviewing comments returned to you about your application</li>
-                            
-                        </ul>
-                    </div>
-                    <div data-c-grid-item="base(1of1) tl(1of2)">
-                        <p data-c-margin="top(2)">What this demo <span data-c-font-weight="bold" data-c-color="stop">does not do</span>:</p>
-                        <ul data-c-margin="top(1)">
-                            
-                                <li>allow you to enter your own information into forms</li>
-                            
-                                <li>save any data</li>
-                            
-                                <li>allow you to submit an application</li>
-                            
-                                <li>reflect final copy/content</li>
-                            
-                        </ul>
+    <div data-c-padding="bottom(3)">
+        <div data-c-container="base(medium, center)">
+            <h2
+                data-c-font-size="h2"
+                data-c-padding="top(3)">Hey Jason, let's get working on an application!</h2>
+            <p data-c-margin="tb(1)">Please select one of the following paths:</p>
+            <div data-c-grid="gutter(all, 1)">
+                <div data-c-grid-item="base(1of1) tp(1of2) equal-col">
+                    <div
+                        data-c-card
+                        data-c-radius="rounded"
+                        data-c-padding="all(1)">
+                        <h3 data-c-heading="h3">Start a New Application</h3>
+                        <p data-c-margin="tb(1)">If you haven't completed an application using this tool before, or you'd like to start an application fresh, select this option.</p>
+                        <a
+                            data-c-button="solid(c1)"
+                            data-c-radius="rounded"
+                            href="/tc-security/citizen/application/form-new/"
+                            title="Start a new application.">Start an Application</a>
                     </div>
                 </div>
-                <p data-c-margin="top(2)">If you have any questions or comments, please <a href="mailto:paul.krisciunas@tbs-sct.gc.ca" title="Email us with your feedback!">contact us via email</a>.</p>
-            </div>
-            <div data-c-grid-item="base(1of1) tl(2of5)">
-                <div
-                    data-c-background="c1(10)"
-                    data-c-border="all(thin, solid, c1)"
-                    data-c-radius="rounded">
-                    <div data-c-padding="all(2)">
-                        <h2 
-                            data-c-color="c1"
-                            data-c-font-size="h3"
-                            data-c-font-weight="bold">My Info and Tools</h2>
-                        <p 
-                            data-c-color="c1"
-                            data-c-margin="tb(1)">Below is a list of handy links that allow you to access your information and tools.</p>
-                        <ul data-c-color="c1">
-                            
-                                <li>
-                                    <a
-                                        href="/tc-security/citizen/application/welcome/"
-                                        title="Open the application tool to create a new application or edit an old one.">Security Clearance Application</a>
-                                </li>
-                            
-                                <li>
-                                    <a
-                                        href="/tc-security/citizen/profile/"
-                                        title="View feedback returned to you by a security advisor.">My Application Feedback</a>
-                                </li>
-                            
-                                <li>
-                                    <a
-                                        href="/tc-security/citizen/account/"
-                                        title="Manage your account information, reset your password, etc.">Manage My Account</a>
-                                </li>
-                            
-                                <li>
-                                    <a
-                                        href="/tc-security/citizen/home/"
-                                        title="Logout of the application.">Logout</a>
-                                </li>
-                            
-                        </ul>
+                <div data-c-grid-item="base(1of1) tp(1of2) equal-col">
+                    <div
+                        data-c-card
+                        data-c-radius="rounded"
+                        data-c-padding="all(1)">
+                        <h3 data-c-heading="h3">Continue an Application</h3>
+                        <p data-c-margin="tb(1)">If you've already begun an application and have the file you were asked to download on your device, select this option.</p>
+                        <a
+                            data-c-button="solid(c1)"
+                            data-c-radius="rounded"
+                            href="/tc-security/citizen/application/resume/"
+                            title="Continue a previous application.">Continue an Application</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
 
         <footer 

@@ -1,0 +1,108 @@
+<div
+    aria-hidden="true"
+    aria-describedby="save-submit-dialog-description"
+    aria-labelledby="save-submit-dialog-title"
+    data-c-dialog
+    data-c-dialog-id="save-submit-dialog"
+    data-c-padding="top(double) bottom(double)"
+    role="dialog">
+    <div
+        data-c-background="white(100)"
+        data-c-radius="rounded"
+        data-c-margin="bottom(double)">
+        <div
+            data-c-padding="tb(normal) right(triple) left(normal)"
+            data-c-border="bottom(thin, solid, black)"
+            data-c-background="c1(100)">
+            <h5
+                data-c-font-size="h4"
+                id="save-submit-dialog-title"
+                data-c-dialog-focus data-c-color="white">
+                Download a Copy and Submit Your Application
+            </h5>
+            <p data-c-margin="top(half)" data-c-color="white">Instead of saving your personal information on our system, we ask that you download your application to your device for safe keeping. Please select a password to lock the file and click Submit. Your application will be passed along to the appropriate security advisor and you'll be prompted to download a copy that is locked with your password in the event you need to return and make changes or submit a new application.</p>
+            <button
+                data-c-dialog-action="close"
+                data-c-dialog-id="save-submit-dialog"
+                type="button">
+                <i class="material-icons" data-c-color="white">close</i>
+            </button>
+        </div>
+        <div
+            data-c-border="bottom(thin, solid, black)"
+            data-c-padding="normal">
+            <div id="reference-dialog-description">
+                <form data-c-grid="gutter">
+                    <div data-c-grid-item="base(1of1)">
+                        <p>By clicking submit you're agreeing that all information in your application is complete to the best of your ability.</p>
+                        <p data-c-margin="top(1)">You're applying for: <span data-c-font-weight="bold" data-c-color="go">Secret Clearance</span> at <span data-c-font-weight="bold" data-c-color="go">Treasury Board of Canada Secretariat</span></p>
+                    </div>
+                    <div data-c-grid-item="base(1of1)">
+                        <p data-c-font-weight="bold">Select a Password</p>
+                    </div>
+                    <div 
+                        data-c-grid-item="base(1of1) tl(1of2)"
+                        data-c-input="password">
+                        <label for="p2">My Application Password</label>
+                        <span>Required</span>
+                        <div>
+                            <input id="p2" required type="password" value="G1assesAreTheBestDisguise" />
+                            <button type="button">
+                                <i class="material-icons">
+                                    visibility
+                                </i>
+                                <i class="material-icons">
+                                    visibility_off
+                                </i>
+                            </button>
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                    <div 
+                        data-c-grid-item="base(1of1) tl(1of2)"
+                        data-c-input="password">
+                        <label for="p2">Confirm Application Password</label>
+                        <span>Required</span>
+                        <div>
+                            <input id="p2" required type="password" value="G1assesAreTheBestDisguise" />
+                            <button type="button">
+                                <i class="material-icons">
+                                    visibility
+                                </i>
+                                <i class="material-icons">
+                                    visibility_off
+                                </i>
+                            </button>
+                        </div>
+                        <span>This input has an error.</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- The following dialog actions can be customized depending on the dialog. -->
+        <div data-c-padding="normal">
+            <div data-c-grid="gutter middle">
+                <div data-c-grid-item="base(1of2)">
+                    <button
+                        data-c-button="outline(slow)"
+                        data-c-radius="rounded"
+                        data-c-dialog-action="close"
+                        data-c-dialog-id="save-submit-dialog">
+                        Cancel
+                    </button>
+                </div>
+                <div
+                    data-c-grid-item="base(1of2)"
+                    data-c-alignment="base(right)">
+                    <a
+                        data-c-button="solid(go)"
+                        data-c-radius="rounded"
+                        href="$ROOT/citizen/profile/"
+                        title="Download your application and view your applications in progress.">
+                        Download &amp; Submit
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -10,7 +10,7 @@
     // Reliability
     $("[data-gc-status-reliability-trigger]").on("click", function() {
         // Nav Hide/Show
-        $("#navBegin").addClass("hidden")
+        // $("#navBegin").addClass("hidden")
         $("#navConsent").removeClass("hidden")
         $("#navBackground").removeClass("hidden")
         $("#navResidence").removeClass("hidden")
@@ -62,7 +62,7 @@
     // Enhanced
     $("[data-gc-status-enhanced-trigger]").on("click", function() {
         // Nav Hide/Show
-        $("#navBegin").addClass("hidden")
+        // $("#navBegin").addClass("hidden")
         $("#navConsent").removeClass("hidden")
         $("#navBackground").removeClass("hidden")
         $("#navResidence").removeClass("hidden")
@@ -114,7 +114,7 @@
     // Secret
     $("[data-gc-status-secret-trigger]").on("click", function() {
         // Nav Hide/Show
-        $("#navBegin").addClass("hidden")
+        // $("#navBegin").addClass("hidden")
         $("#navConsent").removeClass("hidden")
         $("#navBackground").removeClass("hidden")
         $("#navResidence").removeClass("hidden")
@@ -166,7 +166,7 @@
     // Top Secret
     $("[data-gc-status-top-secret-trigger]").on("click", function() {
         // Nav Hide/Show
-        $("#navBegin").addClass("hidden")
+        // $("#navBegin").addClass("hidden")
         $("#navConsent").removeClass("hidden")
         $("#navBackground").removeClass("hidden")
         $("#navResidence").removeClass("hidden")

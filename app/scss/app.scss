@@ -236,13 +236,6 @@ $clone-grid-columns: 12;
             }
         }
     }
-    .sidebar-content {
-        >div,
-        >form {
-            margin: 0 auto;
-            max-width: $clone-medium-layout;
-        }
-    }
     h2 {
         &[data-gc-section-status="incomplete"] {
             i {

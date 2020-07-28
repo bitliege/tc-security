@@ -1,0 +1,261 @@
+<div data-c-padding="bottom(triple)">
+    <div data-c-container="base(full, center)">
+        <div data-c-grid="gutter">
+            <div data-c-grid-item="tl(1of4) ds(1of5)" class="sidebar-wrapper">
+                <div class="sidebar" data-c-padding="tb(triple)">
+                    <span data-c-font-weight="bold" data-c-font-size="h4">On this page:</span>
+                    <nav data-c-margin="top(normal)">
+                        <ul>
+                            <li class="sidebar-complete" id="navBegin">
+                                <i class="material-icons" style="display: inline-block !important; visibility: hidden !important;">circle</i>
+                                <a href="#begin" title="">Introduction</a>
+                            </li>
+                            {% if state == "empty" %}
+                                <li class="sidebar-complete hidden" id="navConsent">
+                            {% elseif state == "progress" %}
+                                <li class="sidebar-complete" id="navConsent">
+                            {% endif %}
+                                <i class="material-icons">error</i>
+                                <i class="material-icons">warning</i>
+                                <i class="material-icons">check_circle</i>
+                                <a href="#consent" title="">Consent &amp; Verification</a>
+                            </li>
+                            {% if state == "empty" %}
+                                <li class="sidebar-incomplete hidden" id="navBackground">
+                            {% elseif state == "progress" %}
+                                <li class="sidebar-incomplete" id="navBackground">
+                            {% endif %}
+                                <i class="material-icons">error</i>
+                                <i class="material-icons">warning</i>
+                                <i class="material-icons">check_circle</i>
+                                <a href="#background" title="">Background Information</a>
+                            </li>
+                            {% if state == "empty" %}
+                                <li class="sidebar-error hidden" id="navResidence">
+                            {% elseif state == "progress" %}
+                                <li class="sidebar-error" id="navResidence">
+                            {% endif %}
+                                <i class="material-icons">error</i>
+                                <i class="material-icons">warning</i>
+                                <i class="material-icons">check_circle</i>
+                                <a href="#residence" title="">Residence</a>
+                            </li>
+                            {% if state == "empty" %}
+                                <li class="sidebar-incomplete hidden" id="navExperience">
+                            {% elseif state == "progress" %}
+                                <li class="sidebar-incomplete" id="navExperience">
+                            {% endif %}
+                                <i class="material-icons">error</i>
+                                <i class="material-icons">warning</i>
+                                <i class="material-icons">check_circle</i>
+                                <a href="#experience" title="">Professional Background</a>
+                            </li>
+                            {% if state == "empty" %}
+                                <li class="sidebar-incomplete hidden" id="navReferences">
+                            {% elseif state == "progress" %}
+                                <li class="sidebar-incomplete" id="navReferences">
+                            {% endif %}
+                                <i class="material-icons">error</i>
+                                <i class="material-icons">warning</i>
+                                <i class="material-icons">check_circle</i>
+                                <a href="#references" title="">Personal References</a>
+                            </li>
+                            {% if state == "empty" %}
+                                <li class="sidebar-incomplete hidden" id="navEducation">
+                            {% elseif state == "progress" %}
+                                <li class="sidebar-incomplete" id="navEducation">
+                            {% endif %}
+                                <i class="material-icons">error</i>
+                                <i class="material-icons">warning</i>
+                                <i class="material-icons">check_circle</i>
+                                <a href="#education" title="">Education &amp; Designations</a>
+                            </li>
+                            {% if state == "empty" %}
+                                <li class="sidebar-incomplete hidden" id="navRecord">
+                            {% elseif state == "progress" %}
+                                <li class="sidebar-incomplete" id="navRecord">
+                            {% endif %}
+                                <i class="material-icons">error</i>
+                                <i class="material-icons">warning</i>
+                                <i class="material-icons">check_circle</i>
+                                <a href="#record" title="">Criminal Record</a>
+                            </li>
+                            <li class="sidebar-incomplete hidden" id="navProNot">
+                                <i class="material-icons">error</i>
+                                <i class="material-icons">warning</i>
+                                <i class="material-icons">check_circle</i>
+                                <a href="#proNot" title="">Proactive Notification</a>
+                            </li>
+                            <li class="sidebar-incomplete hidden" id="navMaritalStatus">
+                                <i class="material-icons">error</i>
+                                <i class="material-icons">warning</i>
+                                <i class="material-icons">check_circle</i>
+                                <a href="#maritalStatus" title="">Marital Status</a>
+                            </li>
+                            <li class="sidebar-incomplete hidden" id="navRoommates">
+                                <i class="material-icons">error</i>
+                                <i class="material-icons">warning</i>
+                                <i class="material-icons">check_circle</i>
+                                <a href="#roommates" title="">Roommates / Cohabitants</a>
+                            </li>
+                            <li class="sidebar-incomplete hidden" id="navRelatives">
+                                <i class="material-icons">error</i>
+                                <i class="material-icons">warning</i>
+                                <i class="material-icons">check_circle</i>
+                                <a href="#relatives" title="">Immediate Relatives</a>
+                            </li>
+                            <li class="sidebar-complete hidden" id="navTravel">
+                                <i class="material-icons">error</i>
+                                <i class="material-icons">warning</i>
+                                <i class="material-icons">check_circle</i>
+                                <a href="#travel" title="">Foreign Travel</a>
+                            </li>
+                            <li class="sidebar-incomplete hidden" id="navPassports">
+                                <i class="material-icons">error</i>
+                                <i class="material-icons">warning</i>
+                                <i class="material-icons">check_circle</i>
+                                <a href="#passports" title="">Foreign Passports</a>
+                            </li>
+                            <li class="sidebar-incomplete hidden" id="navAssets">
+                                <i class="material-icons">error</i>
+                                <i class="material-icons">warning</i>
+                                <i class="material-icons">check_circle</i>
+                                <a href="#assets" title="">Foreign Assets</a>
+                            </li>
+                            {% if state == "empty" %}
+                                <li class="sidebar-incomplete hidden" id="navSummary">
+                            {% elseif state == "progress" %}
+                                <li class="sidebar-incomplete" id="navSummary">
+                            {% endif %}
+                                <i class="material-icons">error</i>
+                                <i class="material-icons">warning</i>
+                                <i class="material-icons">check_circle</i>
+                                <a href="#summary" title="">Save or Submit</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    {# <button id="navStartTrigger" data-c-margin="top(double)" data-c-button="solid(c1)" type="button" data-c-radius="rounded">
+                        Upload &amp; Continue
+                    </button> #}
+                    {% if state == "empty" %}
+                        <button id="navSaveTrigger" class="hidden" data-c-margin="top(double)" data-c-button="outline(go)" type="button" data-c-radius="rounded" data-c-dialog-id="save-quit-dialog" data-c-dialog-action="open">
+                    {% elseif state == "progress" %}
+                        <button id="navSaveTrigger" data-c-margin="top(double)" data-c-button="outline(go)" type="button" data-c-radius="rounded" data-c-dialog-id="save-quit-dialog" data-c-dialog-action="open">
+                    {% endif %}
+                        Save &amp; Continue Later
+                    </button>
+                </div>
+            </div>
+            <div data-c-grid-item="tl(3of4) ds(4of5)" class="sidebar-content">
+                <form data-c-container="base(medium, left)">
+                    {% include "00-upload.twig" with {state} %}
+                    <div data-gc-form-type>
+                        <h2 id="before" data-c-margin="top(3) bottom(1)" data-c-heading="h2" data-c-padding="bottom(1)">
+                            Security Screening/Clearance Selection
+                        </h2>
+                        <div id="selection" data-c-input="radio">
+                            <label for="clearanceType">I'm applying for:</label>
+                            <span>Required</span>
+                            <div id="clearanceType" role="radiogroup">
+                                <label for="clearanceTypeReliability">
+                                    {% if state == "empty" %}
+                                        <input id="clearanceTypeReliability" required name="clearanceType" type="radio" data-gc-status-reliability-trigger/>
+                                    {% elseif state == "progress" %}
+                                        <input id="clearanceTypeReliability" checked required name="clearanceType" type="radio" data-gc-status-reliability-trigger/>
+                                    {% endif %}
+                                    <span>Reliability Status</span>
+                                </label>
+                                <label for="clearanceTypeEnhanced">
+                                    <input id="clearanceTypeEnhanced" required name="clearanceType" type="radio" data-gc-status-enhanced-trigger/>
+                                    <span>Enhanced Reliability Status</span>
+                                </label>
+                                <label for="clearanceTypeSecret">
+                                    <input id="clearanceTypeSecret" required name="clearanceType" type="radio" data-gc-status-secret-trigger/>
+                                    <span>Secret Security Clearance</span>
+                                </label>
+                                <label for="clearanceTypeTop">
+                                    <input id="clearanceTypeTop" required name="clearanceType" type="radio" data-gc-status-top-secret-trigger/>
+                                    <span>Top Secret Security Clearance</span>
+                                </label>
+                            </div>
+                            <span>This input has an error.</span>
+                        </div>
+                        <div data-c-input="select">
+                            <label for="SEL2">I'm applying to...</label>
+                            <span>Required</span>
+                            <div>
+                                <i class="material-icons">
+                                    arrow_drop_down
+                                </i>
+                                <select required id="SEL2">
+                                    <option disabled>Select a department...</option>
+                                    <option>Employment and Social Development Canada</option>
+                                    <option selected>Treasury Board of Canada Secretariat</option>
+                                    <option>Canada Revenue Agency</option>
+                                    <option>etc.</option>
+                                </select>
+                            </div>
+                            <span>This input has an error.</span>
+                        </div>
+                        <p data-c-margin="bottom(1)">Are you applying for security screening as a result of applying to a job on GC Jobs or Talent Cloud? If you have it handy, please enter the job process ID or the Talent Cloud reference number for the position you've applied to. This helps the security screening application platform communicate with the correct managers and HR employees to ensure your information is in the right hands as fast as possible.</p>
+                        <p data-c-margin="bottom(1)">No pressure if you don't have either of these numbers. Feel free to leave these fields blank and continue on with your registration.</p>
+                        <div data-c-grid="gutter(all, 1)">
+                            <div
+                                data-c-grid-item="base(1of1) tl(1of2)" 
+                                data-c-input="text">
+                                <label for="TI2">GC Jobs Process ID</label>
+                                <span>Required</span>
+                                <div>
+                                    <input id="TI2" placeholder="e.g. 12312-23423-23426" type="text" />
+                                </div>
+                                <span>This input has an error.</span>
+                            </div>
+                            <div
+                                data-c-grid-item="base(1of1) tl(1of2)" 
+                                data-c-input="text">
+                                <label for="TI2">Talent Cloud Reference Number</label>
+                                <span>Required</span>
+                                <div>
+                                    <input id="TI2" placeholder="e.g. 54764" type="text" />
+                                </div>
+                                <span>This input has an error.</span>
+                            </div>
+                        </div>
+                    </div>
+                    {% include "01-consent.twig" %}
+                    {% include "02-background-info.twig" %}
+                    {% include "03-residence.twig" %}
+                    {% include "04-experience.twig" %}
+                    {% include "05-references.twig" %}
+                    {% include "06-education.twig" %}
+                    {% include "07-records.twig" %}
+                    {% include "08-notification.twig" %}
+                    {% include "09-marital-status.twig" %}
+                    {% include "10-cohabitants.twig" %}
+                    {% include "11-relatives.twig" %}
+                    {% include "12-foreign-travel.twig" %}
+                    {% include "13-foreign-passports.twig" %}
+                    {% include "14-foreign-assets.twig" %}
+                    {% include "15-summary.twig" %}
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div data-c-dialog-overlay></div>
+{% include "dialogs/legal-name.twig" %}
+{% include "dialogs/residence.twig" %}
+{% include "dialogs/experience.twig" %}
+{% include "dialogs/reference.twig" %}
+{% include "dialogs/education.twig" %}
+{% include "dialogs/recognition.twig" %}
+{% include "dialogs/record.twig" %}
+{% include "dialogs/09-current-spouse.twig" %}
+{% include "dialogs/09-former-spouse.twig" %}
+{% include "dialogs/10-cohabitant.twig" %}
+{% include "dialogs/11-relative.twig" %}
+{% include "dialogs/12-travel.twig" %}
+{% include "dialogs/13-passport.twig" %}
+{% include "dialogs/14-save-quit.twig" %}
+{% include "dialogs/15-save-submit.twig" %}

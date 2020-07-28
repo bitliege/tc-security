@@ -1,0 +1,38 @@
+{% if state == "empty" %}
+    <div id="sectionSummary" class="hidden">
+{% elseif state == "progress" %}
+    <div id="sectionSummary">
+{% endif %}
+    <div data-c-grid="gutter(all, 1)">
+        <div data-c-grid-item="base(1of1)">
+            <span id="summary"></span>
+            <h2 data-c-margin="top(3) bottom(1)" data-c-heading="h2" data-c-padding="bottom(1)">Save, Download, Submit</h2>
+            <p data-c-margin="bottom(normal)">Please ensure that all information is correctly entered. If there are errors outlined anywhere in the form above, please ensure they're fixed before submitting the downloaded file to you hiring manager. To certify the information that you have provided, please agree below and click submit.</p>
+            <p data-c-margin="tb(1)">If you'd like to take a break and come back to your application, please use the "Save &amp; Download" button to set a password and download your application file. You'll be able to continue editing your application later by returning here and uploading that same file.</p>
+        </div>
+        <div data-c-input="checkbox(group)" data-c-grid-item="base(1of1)">
+            <label>&nbsp;</label>
+            <span>Required</span>
+            <div>
+                <label for="finalConsent">
+                    <input
+                        id="finalConsent"
+                        type="checkbox"
+                        required/>
+                    <span>I hereby certify that the information that I have provided in this document is true and correct to the best of my knowledge.</span>
+                </label>
+            </div>
+            <span>This input has an error.</span>
+        </div>
+        <div data-c-grid-item="base(1of2)" data-c-align="base(center) tl(left)">
+            <button data-c-button="solid(c1)" data-c-radius="rounded" type="button" data-c-dialog-id="save-quit-dialog" data-c-dialog-action="open">
+                Save &amp; Continue Later
+            </button>
+        </div>
+        <div data-c-grid-item="base(1of2)" data-c-align="base(center) tl(right)">
+            <button data-c-button="solid(go)" data-c-radius="rounded" type="button" data-c-dialog-id="save-submit-dialog" data-c-dialog-action="open">
+                Save &amp; Submit
+            </button>
+        </div>
+    </div>
+</div>
