@@ -30,7 +30,7 @@
     <div data-c-container="full">
         <div data-c-grid>
             {# Nav #}
-            <div data-c-grid-item="base(1of1) tl(2of10) equal-col">
+            <div data-c-grid-item="base(1of1) tl(1of4) ds(1of5) equal-col">
                 <div class="sidebar-wrapper">
                     <div
                         class="sidebar" 
@@ -39,26 +39,16 @@
                         <nav data-c-margin="top(normal)">
                             <ul>
                                 <li>
-                                    <a href="#background" title="">Background Information</a>
+                                    <a href="#basics" title="">Information</a>
                                 </li>
                                 <li>
-                                    <a href="#residence" title="">Residence</a>
+                                    <a href="#download" title="">Download</a>
                                 </li>
                                 <li>
-                                    <a href="#professionalBackground" title="">Professional Background</a>
+                                    <a href="#highlights" title="">Highlights</a>
                                 </li>
                                 <li>
-                                    <a href="#personalReferences" title="">Personal References</a>
-                                </li>
-                                <li>
-                                    <a href="#education" title="">Education and Designations</a>
-                                </li>
-                                <li>
-                                    <a href="#criminalRecord" title="">Criminal Record</a>
-                                </li>
-                                <br>
-                                <li>
-                                    <a href="#verification" title="">Verify and Submit</a>
+                                    <a href="#approvals" title="">Approvals</a>
                                 </li>
                             </ul>
                         </nav>
@@ -67,141 +57,197 @@
             </div>
             {# Application #}
             <div
-                data-c-grid-item="base(1of1) tl(5of10)" 
-                data-c-padding="bottom(3) right(3)">
+                data-c-grid-item="base(1of1) tl(3of4) ds(4of5)" 
+                data-c-padding="bottom(3)">
                 <h2
                     data-c-font-size="h2"
-                    data-c-padding="top(3)"
-                    id="background">Background Information</h2>
-                <h3 
-                    data-c-heading="h3"
-                    data-c-margin="top(2) bottom(1)">Legal Name and Contact Information</h3>
+                    data-c-padding="top(3) bottom(1)"
+                    id="basics">Application Information</h2>
                 <div data-c-grid="gutter(all, 1)">
-                    <div data-c-grid-item="base(1of1) tl(1of2)">
-                        <p data-c-font-weight="bold">Surname</p>
-                        <p>Bergeron</p>
+                    <div data-c-grid-item="base(1of1), tl(1of2)">
+                        <p 
+                            data-c-color="c1"
+                            data-c-font-weight="bold">Jason Bergeron</p>
+                        <p 
+                            data-c-margin="top(.25)"
+                            data-c-color="gray">jason.bergeron@email.com | DT: (555) 555-5555 | ET: (555) 555-5555</p>
                     </div>
-                    <div data-c-grid-item="base(1of1) tl(1of2)">
-                        <p data-c-font-weight="bold">Given Name(s)</p>
-                        <p>Jason Bailey</p>
-                    </div>
-                    <div data-c-grid-item="base(1of1)">
-                        <p data-c-font-weight="bold">Common Name</p>
-                        <p>Jace</p>
-                    </div>
-                    <div data-c-grid-item="base(1of1)">
-                        <p data-c-font-weight="bold">Legal Name at Birth</p>
-                        <p>Same as current name.</p>
-                    </div>
-                    <div data-c-grid-item="base(1of1)">
-                        <p data-c-font-weight="bold">Nicknames</p>
-                        <p>Jace, JC, Bail</p>
-                    </div>
-                    <div data-c-grid-item="base(1of1)">
-                        <p data-c-font-weight="bold">Date of Birth</p>
-                        <p>1991/JUN/01</p>
-                    </div>
-                    <div data-c-grid-item="base(1of1)">
-                        <p data-c-font-weight="bold">Gender</p>
-                        <p>Male</p>
-                    </div>
-                    <div data-c-grid-item="base(1of1)">
-                        <p data-c-font-weight="bold">Preferred Official Language</p>
-                        <p>English</p>
-                    </div>
-                    <div data-c-grid-item="base(1of1) tl(1of2)">
-                        <p data-c-font-weight="bold">Daytime Phone</p>
-                        <p>1-555-555-5555</p>
-                    </div>
-                    <div data-c-grid-item="base(1of1) tl(1of2)">
-                        <p data-c-font-weight="bold">Evening Phone</p>
-                        <p>1-555-555-5555</p>
-                    </div>
-                    <div data-c-grid-item="base(1of1) tl(1of2)">
-                        <p data-c-font-weight="bold">Personal Email</p>
-                        <p>jason.bergeron@email.com</p>
-                    </div>
-                    <div data-c-grid-item="base(1of1) tl(1of2)">
-                        <p data-c-font-weight="bold">Work Email</p>
-                        <p>jason.bergeron@work.com</p>
+                    <div data-c-grid-item="base(1of1), tl(1of2)" data-c-align="base(left) tl(right)">
+                        <p>Applied on: <span data-c-color="stop">05/JUL/2020</span></p>
                     </div>
                 </div>
-                <h3 
-                    data-c-heading="h3"
-                    data-c-margin="top(2) bottom(1)">Previous Legal Names</h3>
-                <div data-c-grid="gutter(all, 1)">
-                    <div data-c-grid-item="base(1of1)">
-                        <p>Not applicable.</p>
-                    </div>
-                </div>
-                <h3 
-                    data-c-heading="h3"
-                    data-c-margin="top(2) bottom(1)">Citizenship</h3>
-                <div data-c-grid="gutter(all, 1)">
-                    <div data-c-grid-item="base(1of1)">
-                        <p>
-                            <img
-                                alt="Maple leaf icon."
-                                class="tc-inline-leaf"
-                                src="$ROOT/img/icon-leaf.svg"> Canadian Citizen</p>
-                    </div>
-                    <div data-c-grid-item="base(1of1)">
-                        <p data-c-font-weight="bold">Jason has these other citizenships:</p>
-                        <p>South Africa</p>
-                    </div>
-                    <div data-c-grid-item="base(1of1)">
-                        <p data-c-font-weight="bold">Place of Birth</p>
-                        <p>Ottawa, Ontario, Canada</p>
-                    </div>
-                </div>
-                <h3 
-                    data-c-heading="h3"
-                    data-c-margin="top(2) bottom(1)">Previous Security Screening</h3>
-                <div data-c-grid="gutter(all, 1)">
-                    <div data-c-grid-item="base(1of1)">
-                        <p data-c-font-weight="bold"><span data-c-color="go" data-c-margin="right(.5)">✓</span> Jason has previously applied for security status or clearance.</p>
-                        <p data-c-margin="top(.25) left(1)">Top Secret, Department of Defense, 2017</p>
-                    </div>
-                    <div data-c-grid-item="base(1of1)">
-                        <p data-c-font-weight="bold"><span data-c-color="go" data-c-margin="right(.5)">✓</span> Jason has previously been granted security status or clearance.</p>
-                        <p data-c-margin="top(.25) left(1)">Top Secret, Department of Defense, 2017</p>
-                    </div>
-                    <div data-c-grid-item="base(1of1)">
-                        <p data-c-font-weight="bold"><span data-c-color="stop" data-c-margin="right(.5)">X</span> Jason's security status or clearance has never been revoked.</p>
-                    </div>
-                    <div data-c-grid-item="base(1of1)">
-                        <p data-c-font-weight="bold"><span data-c-color="stop" data-c-margin="right(.5)">X</span> Jason has never been denied security status or clearance.</p>
+                <div
+                    data-c-background="c1(10)"
+                    data-c-border="all(thin, solid, c1)"
+                    data-c-margin="top(1)"
+                    data-c-padding="all(1)"
+                    data-c-radius="rounded">
+                    <div data-c-grid="gutter(all, 1)">
+                        <div data-c-grid-item="base(1of1) tl(1of2)">
+                            <p 
+                                data-c-color="c1"
+                                data-c-font-weight="bold">Clearance Type</p>
+                            <p 
+                                data-c-margin="top(.25)"
+                                data-c-color="c1">Reliability</p>
+                        </div>
+                        <div data-c-grid-item="base(1of1) tl(1of2)">
+                            <p 
+                                data-c-color="c1"
+                                data-c-font-weight="bold">Language Preference</p>
+                            <p 
+                                data-c-margin="top(.25)"
+                                data-c-color="c1">English</p>
+                        </div>
+                        <div data-c-grid-item="base(1of1) tl(1of2)">
+                            <p 
+                                data-c-color="c1"
+                                data-c-font-weight="bold">GC Jobs ID</p>
+                            <p 
+                                data-c-margin="top(.25)"
+                                data-c-color="c1">68731984</p>
+                        </div>
+                        <div data-c-grid-item="base(1of1) tl(1of2)">
+                            <p 
+                                data-c-color="c1"
+                                data-c-font-weight="bold">Talent Cloud</p>
+                            <p 
+                                data-c-margin="top(.25)"
+                                data-c-color="c1"><a href="https://talent.canada.ca" title="View the job advertisement on Talent Cloud.">Policy Advisor</a></p>
+                        </div>
                     </div>
                 </div>
                 <h2
                     data-c-font-size="h2"
-                    data-c-padding="top(3)"
-                    id="residence">Residence</h2>
-                {% include "../../components/application-null.twig" %}
+                    data-c-padding="top(3) bottom(1)"
+                    id="download">Download Application</h2>
+                <p>Please note that downloading an application means:</p>
+                <ul data-c-margin="tb(1)">
+                    <li>you agree to store the file in a <a href="#" title="Learn more about storing security applications safely.">secure location</a></li>
+                    <li>you agree to only share the downloaded file with the appropriate security and HR personal for this file</li>
+                    <li>you agree to take responsibility for the security of the device the file is downloaded to</li>
+                </ul>
+                <button
+                    data-c-button="solid(go)"
+                    data-c-radius="rounded"
+                    type="button">
+                    I Agree, Download Application
+                </button>
                 <h2
                     data-c-font-size="h2"
-                    data-c-padding="top(3)"
-                    id="professionalBackground">Professional Background</h2>
-                {% include "../../components/application-null.twig" %}
+                    data-c-padding="top(3) bottom(1)"
+                    id="highlights">Highlights</h2>
+                <p data-c-padding="bottom(1)">Below are a list of generic highlights from this application that offer insight into sections that might be of interest during your review.</p>
+                <div data-c-grid="gutter(all, 1)">
+                    <div data-c-grid-item="base(1of1) tl(1of3) equal-col">
+                        <div data-c-card data-c-radius="rounded" data-c-padding="all(1)">
+                            <p data-c-font-weight="bold" data-c-color="slow">Gaps in Employment</p>
+                            <p data-c-margin="top(.5)">This applicant has reported having gaps in their employment. Please ensure that you review this section to ensure gaps are properly identified and described.</p>
+                        </div>
+                    </div>
+                    <div data-c-grid-item="base(1of1) tl(1of3) equal-col">
+                        <div data-c-card data-c-radius="rounded" data-c-padding="all(1)">
+                            <p data-c-font-weight="bold" data-c-color="stop">Missing Relative Information</p>
+                            <p data-c-margin="top(.5)">This applicant indicated that they could not supply information for their mother. Please ensure that you review their justification for this section.</p>
+                        </div>
+                    </div>
+                </div>
                 <h2
                     data-c-font-size="h2"
-                    data-c-padding="top(3)"
-                    id="personalReferences">Personal References</h2>
-                {% include "../../components/application-null.twig" %}
-                <h2
-                    data-c-font-size="h2"
-                    data-c-padding="top(3)"
-                    id="education">Education and Designations</h2>
-                {% include "../../components/application-null.twig" %}
-                <h2
-                    data-c-font-size="h2"
-                    data-c-padding="top(3)"
-                    id="criminalRecord">Criminal Record</h2>
-                {% include "../../components/application-null.twig" %}
-                <h2
-                    data-c-font-size="h2"
-                    data-c-padding="top(3)"
-                    id="verification">Verify and Submit</h2>
+                    data-c-padding="top(3) bottom(1)"
+                    id="approvals">Approvals</h2>
+                <p>This tool allows you to submit an approval or denial based on the application received. We encourage you to share non-sensitive advice or notes with the applicant so that they can fix problems or improve the quality of their subsequent applications.</p>
+                {# Comments #}
+                <div data-c-padding="top(3)">
+                    <h3 data-c-heading="h3">Add Notes</h3>
+                    <p data-c-margin="tb(1)">Please note that "shared" notes will be sent along to the applicant in the event their application is denied so that they can fix problems that have been identified.</p>
+                    <div 
+                        data-c-background="c1(10)"
+                        data-c-border="all(thin, solid, c1)"
+                        data-c-margin="bottom(1)"
+                        data-c-padding="top(1) left(1) right(1) bottom(.5)"
+                        data-c-radius="rounded">
+                        <form data-c-grid="gutter(all, 1) middle">
+                            <div
+                                data-c-grid-item="base(1of1)" 
+                                data-c-input="textarea"
+                                style="margin-bottom: -2rem;">
+                                <label for="TA2">Note:</label>
+                                <span>Required</span>
+                                <div>
+                                    <textarea id="TA2" placeholder="e.g. The reference section needs more detailed information..."></textarea>
+                                </div>
+                                {# <span>This input has an error.</span> #}
+                            </div>
+                            <div
+                                data-c-grid-item="base(1of1) tl(2of3)"
+                                data-c-input="checkbox(single)">
+                                <span>Required</span>
+                                <div>
+                                    <label for="cA1">
+                                        <input
+                                            id="cA1"
+                                            type="checkbox"/>
+                                        <span>Share this note with applicant.</span>
+                                    </label>
+                                </div>
+                                <span>This input has an error.</span>
+                            </div>
+                            <div
+                                data-c-align="base(left) tl(right)" 
+                                data-c-grid-item="base(1of1) tl(1of3)">
+                                <button
+                                    data-c-button="solid(c1)"
+                                    data-c-radius="rounded">Add Note</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div data-c-accordion-group>
+                        <div data-c-accordion>
+                            <button aria-expanded="false" data-c-accordion-trigger tabindex="0" type="button">
+                                <div>
+                                    <p>View All Notes (3)</p>
+                                </div>
+                                <span data-c-visibility="invisible">Click to view...</span>
+                                <i aria-hidden="true" data-c-accordion-add data-c-color="c1" data-c-font-size="h3" data-c-font-weight="bold">+</i>
+                                <i aria-hidden="true" data-c-accordion-remove data-c-color="c1" data-c-font-size="h3" data-c-font-weight="bold">-</i>
+                            </button>
+                            <div aria-hidden="true" data-c-accordion-content>
+                                <div data-c-padding="top(.5) bottom(1)">
+                                    {% include "../../components/comment.twig" with {
+                                        "comments": [
+                                            {
+                                                "status": "shared",
+                                                "first": "Cassandra",
+                                                "last": "Goodwill",
+                                                "date": "2020/JUL/04",
+                                                "copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique lectus congue magna dignissim ultricies. Praesent mi tellus, aliquet at felis ac, aliquet congue augue."
+                                            },
+                                            {
+                                                "status": "private",
+                                                "first": "Cassandra",
+                                                "last": "Goodwill",
+                                                "date": "2020/JUL/02",
+                                                "copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique lectus congue magna dignissim ultricies. Praesent mi tellus, aliquet at felis ac, aliquet congue augue. Donec volutpat odio quis mauris sagittis, a tempor turpis feugiat. Aliquam rutrum massa ac augue commodo mollis."
+                                            },
+                                            {
+                                                "status": "private",
+                                                "first": "Cassandra",
+                                                "last": "Goodwill",
+                                                "date": "2020/JUL/02",
+                                                "copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique lectus congue magna dignissim ultricies."
+                                            }
+                                        ]
+                                    } %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {# Approvals #}
+                <h3
+                    data-c-heading="h3"
+                    data-c-padding="top(3)">Verify and Submit</h3>
                 <p data-c-margin="tb(1)">I, the delegated  hiring official or  security official, confirm that I have performed the following verifications, assessments, and inquiries:</p>
                 <div 
                     class="tc-consent-table"
@@ -276,7 +322,7 @@
                 <div data-c-grid="gutter(all, 1)">
                     <div
                         data-c-align="base(center) tl(left)" 
-                        data-c-grid-item="base(1of1) tl(1of3)">
+                        data-c-grid-item="base(1of1) tl(1of2)">
                         <a
                             data-c-button="outline(stop)"
                             data-c-radius="rounded"
@@ -284,17 +330,8 @@
                             title="Save and continue reviewing later.">Save and Reject</a>
                     </div>
                     <div
-                        data-c-align="base(center)" 
-                        data-c-grid-item="base(1of1) tl(1of3)">
-                        <a
-                            data-c-button="outline(c1)"
-                            data-c-radius="rounded"
-                            href="#"
-                            title="Save and continue reviewing later.">Save and Quit</a>
-                    </div>
-                    <div
                         data-c-align="base(center) tl(right)" 
-                        data-c-grid-item="base(1of1) tl(1of3)">
+                        data-c-grid-item="base(1of1) tl(1of2)">
                         <a
                             data-c-button="solid(go)"
                             data-c-radius="rounded"
@@ -302,99 +339,241 @@
                             title="Save and continue reviewing later.">Save and Approve</a>
                     </div>
                 </div>
-            </div>
-            {# Comments #}
-            <div data-c-grid-item="base(1of1) tl(3of10) equal-col">
-                <div class="sidebar-wrapper">
-                    <div
-                        class="tc-comments"
-                        data-c-padding="tb(3)">
-                        <h2 data-c-heading="h3">Add a Note</h2>
-                        <p data-c-margin="tb(1)">Please note that "shared" notes will be sent along to the applicant in the event their application is denied so that they can fix problems that have been identified.</p>
-                        <div 
-                            data-c-background="c1(10)"
-                            data-c-border="all(thin, solid, c1)"
-                            data-c-margin="bottom(1)"
-                            data-c-padding="top(1) left(1) right(1) bottom(.5)"
-                            data-c-radius="rounded">
-                            <form data-c-grid="gutter(all, 1) middle">
-                                <div
-                                    data-c-grid-item="base(1of1)" 
-                                    data-c-input="textarea"
-                                    style="margin-bottom: -2rem;">
-                                    <label for="TA2">Note:</label>
-                                    <span>Required</span>
-                                    <div>
-                                        <textarea id="TA2" placeholder="e.g. The reference section needs more detailed information..."></textarea>
-                                    </div>
-                                    {# <span>This input has an error.</span> #}
-                                </div>
-                                <div
-                                    data-c-grid-item="base(1of1) tl(2of3)"
-                                    data-c-input="checkbox(single)">
-                                    <span>Required</span>
-                                    <div>
-                                        <label for="cA1">
-                                            <input
-                                                id="cA1"
-                                                type="checkbox"/>
-                                            <span>Share this note with applicant.</span>
-                                        </label>
-                                    </div>
-                                    <span>This input has an error.</span>
-                                </div>
-                                <div
-                                    data-c-align="base(left) tl(right)" 
-                                    data-c-grid-item="base(1of1) tl(1of3)">
-                                    <button
-                                        data-c-button="solid(c1)"
-                                        data-c-radius="rounded">Add Note</button>
-                                </div>
-                            </form>
+                {# <div>
+                    <h2
+                        data-c-font-size="h2"
+                        data-c-padding="top(3)"
+                        id="background">Background Information</h2>
+                    <h3 
+                        data-c-heading="h3"
+                        data-c-margin="top(2) bottom(1)">Legal Name and Contact Information</h3>
+                    <div data-c-grid="gutter(all, 1)">
+                        <div data-c-grid-item="base(1of1) tl(1of2)">
+                            <p data-c-font-weight="bold">Surname</p>
+                            <p>Bergeron</p>
                         </div>
-                        <div data-c-accordion-group>
-                            <div data-c-accordion>
-                                <button aria-expanded="false" data-c-accordion-trigger tabindex="0" type="button">
-                                    <div>
-                                        <p>View All Notes (3)</p>
-                                    </div>
-                                    <span data-c-visibility="invisible">Click to view...</span>
-                                    <i aria-hidden="true" data-c-accordion-add data-c-color="c1" data-c-font-size="h3" data-c-font-weight="bold">+</i>
-                                    <i aria-hidden="true" data-c-accordion-remove data-c-color="c1" data-c-font-size="h3" data-c-font-weight="bold">-</i>
-                                </button>
-                                <div aria-hidden="true" data-c-accordion-content>
-                                    <div data-c-padding="top(.5) bottom(1)">
-                                        {% include "../../components/comment.twig" with {
-                                            "comments": [
-                                                {
-                                                    "status": "shared",
-                                                    "first": "Cassandra",
-                                                    "last": "Goodwill",
-                                                    "date": "2020/JUL/04",
-                                                    "copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique lectus congue magna dignissim ultricies. Praesent mi tellus, aliquet at felis ac, aliquet congue augue."
-                                                },
-                                                {
-                                                    "status": "private",
-                                                    "first": "Cassandra",
-                                                    "last": "Goodwill",
-                                                    "date": "2020/JUL/02",
-                                                    "copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique lectus congue magna dignissim ultricies. Praesent mi tellus, aliquet at felis ac, aliquet congue augue. Donec volutpat odio quis mauris sagittis, a tempor turpis feugiat. Aliquam rutrum massa ac augue commodo mollis."
-                                                },
-                                                {
-                                                    "status": "private",
-                                                    "first": "Cassandra",
-                                                    "last": "Goodwill",
-                                                    "date": "2020/JUL/02",
-                                                    "copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique lectus congue magna dignissim ultricies."
-                                                }
-                                            ]
-                                        } %}
-                                    </div>
-                                </div>
-                            </div>
+                        <div data-c-grid-item="base(1of1) tl(1of2)">
+                            <p data-c-font-weight="bold">Given Name(s)</p>
+                            <p>Jason Bailey</p>
+                        </div>
+                        <div data-c-grid-item="base(1of1)">
+                            <p data-c-font-weight="bold">Common Name</p>
+                            <p>Jace</p>
+                        </div>
+                        <div data-c-grid-item="base(1of1)">
+                            <p data-c-font-weight="bold">Legal Name at Birth</p>
+                            <p>Same as current name.</p>
+                        </div>
+                        <div data-c-grid-item="base(1of1)">
+                            <p data-c-font-weight="bold">Nicknames</p>
+                            <p>Jace, JC, Bail</p>
+                        </div>
+                        <div data-c-grid-item="base(1of1)">
+                            <p data-c-font-weight="bold">Date of Birth</p>
+                            <p>1991/JUN/01</p>
+                        </div>
+                        <div data-c-grid-item="base(1of1)">
+                            <p data-c-font-weight="bold">Gender</p>
+                            <p>Male</p>
+                        </div>
+                        <div data-c-grid-item="base(1of1)">
+                            <p data-c-font-weight="bold">Preferred Official Language</p>
+                            <p>English</p>
+                        </div>
+                        <div data-c-grid-item="base(1of1) tl(1of2)">
+                            <p data-c-font-weight="bold">Daytime Phone</p>
+                            <p>1-555-555-5555</p>
+                        </div>
+                        <div data-c-grid-item="base(1of1) tl(1of2)">
+                            <p data-c-font-weight="bold">Evening Phone</p>
+                            <p>1-555-555-5555</p>
+                        </div>
+                        <div data-c-grid-item="base(1of1) tl(1of2)">
+                            <p data-c-font-weight="bold">Personal Email</p>
+                            <p>jason.bergeron@email.com</p>
+                        </div>
+                        <div data-c-grid-item="base(1of1) tl(1of2)">
+                            <p data-c-font-weight="bold">Work Email</p>
+                            <p>jason.bergeron@work.com</p>
                         </div>
                     </div>
-                </div>
+                    <h3 
+                        data-c-heading="h3"
+                        data-c-margin="top(2) bottom(1)">Previous Legal Names</h3>
+                    <div data-c-grid="gutter(all, 1)">
+                        <div data-c-grid-item="base(1of1)">
+                            <p>Not applicable.</p>
+                        </div>
+                    </div>
+                    <h3 
+                        data-c-heading="h3"
+                        data-c-margin="top(2) bottom(1)">Citizenship</h3>
+                    <div data-c-grid="gutter(all, 1)">
+                        <div data-c-grid-item="base(1of1)">
+                            <p>
+                                <img
+                                    alt="Maple leaf icon."
+                                    class="tc-inline-leaf"
+                                    src="$ROOT/img/icon-leaf.svg"> Canadian Citizen</p>
+                        </div>
+                        <div data-c-grid-item="base(1of1)">
+                            <p data-c-font-weight="bold">Jason has these other citizenships:</p>
+                            <p>South Africa</p>
+                        </div>
+                        <div data-c-grid-item="base(1of1)">
+                            <p data-c-font-weight="bold">Place of Birth</p>
+                            <p>Ottawa, Ontario, Canada</p>
+                        </div>
+                    </div>
+                    <h3 
+                        data-c-heading="h3"
+                        data-c-margin="top(2) bottom(1)">Previous Security Screening</h3>
+                    <div data-c-grid="gutter(all, 1)">
+                        <div data-c-grid-item="base(1of1)">
+                            <p data-c-font-weight="bold"><span data-c-color="go" data-c-margin="right(.5)">✓</span> Jason has previously applied for security status or clearance.</p>
+                            <p data-c-margin="top(.25) left(1)">Top Secret, Department of Defense, 2017</p>
+                        </div>
+                        <div data-c-grid-item="base(1of1)">
+                            <p data-c-font-weight="bold"><span data-c-color="go" data-c-margin="right(.5)">✓</span> Jason has previously been granted security status or clearance.</p>
+                            <p data-c-margin="top(.25) left(1)">Top Secret, Department of Defense, 2017</p>
+                        </div>
+                        <div data-c-grid-item="base(1of1)">
+                            <p data-c-font-weight="bold"><span data-c-color="stop" data-c-margin="right(.5)">X</span> Jason's security status or clearance has never been revoked.</p>
+                        </div>
+                        <div data-c-grid-item="base(1of1)">
+                            <p data-c-font-weight="bold"><span data-c-color="stop" data-c-margin="right(.5)">X</span> Jason has never been denied security status or clearance.</p>
+                        </div>
+                    </div>
+                    <h2
+                        data-c-font-size="h2"
+                        data-c-padding="top(3)"
+                        id="residence">Residence</h2>
+                    {% include "../../components/application-null.twig" %}
+                    <h2
+                        data-c-font-size="h2"
+                        data-c-padding="top(3)"
+                        id="professionalBackground">Professional Background</h2>
+                    {% include "../../components/application-null.twig" %}
+                    <h2
+                        data-c-font-size="h2"
+                        data-c-padding="top(3)"
+                        id="personalReferences">Personal References</h2>
+                    {% include "../../components/application-null.twig" %}
+                    <h2
+                        data-c-font-size="h2"
+                        data-c-padding="top(3)"
+                        id="education">Education and Designations</h2>
+                    {% include "../../components/application-null.twig" %}
+                    <h2
+                        data-c-font-size="h2"
+                        data-c-padding="top(3)"
+                        id="criminalRecord">Criminal Record</h2>
+                    {% include "../../components/application-null.twig" %}
+                    <h2
+                        data-c-font-size="h2"
+                        data-c-padding="top(3)"
+                        id="verification">Verify and Submit</h2>
+                    <p data-c-margin="tb(1)">I, the delegated  hiring official or  security official, confirm that I have performed the following verifications, assessments, and inquiries:</p>
+                    <div 
+                        class="tc-consent-table"
+                        data-c-table>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">
+                                        Verification
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% include "../../components/consent-checkbox.twig" with {
+                                    "verifications": [
+                                        {
+                                            "id": "ver1",
+                                            "label": "Verification of identity and background"
+                                        },
+                                        {
+                                            "id": "ver2",
+                                            "label": "Verification of educational and professional credentials"
+                                        },
+                                        {
+                                            "id": "ver3",
+                                            "label": "Verifications of personal and professional references"
+                                        },
+                                        {
+                                            "id": "ver4",
+                                            "label": "Law enforcement inquiry (criminal record check)"
+                                        },
+                                        {
+                                            "id": "ver5",
+                                            "label": "Financial inquiry (credit check)"
+                                        },
+                                        {
+                                            "id": "ver6",
+                                            "label": "Law enforcement inquiry (law enforcement record check)"
+                                        },
+                                        {
+                                            "id": "ver7",
+                                            "label": "Security questionnaire and/or security interview"
+                                        },
+                                        {
+                                            "id": "ver8",
+                                            "label": "Open source inquiry"
+                                        },
+                                        {
+                                            "id": "ver9",
+                                            "label": "CSIS security assessment"
+                                        },
+                                        {
+                                            "id": "ver10",
+                                            "label": "Foreign assets"
+                                        },
+                                        {
+                                            "id": "ver11",
+                                            "label": "Military service"
+                                        },
+                                        {
+                                            "id": "ver12",
+                                            "label": "Polygraph examinations"
+                                        }
+                                    ]
+                                } %}
+                            </tbody>
+                        </table>
+                    </div>
+                    <hr 
+                        data-c-hr="thin(gray)"
+                        data-c-margin="tb(3)">
+                    <div data-c-grid="gutter(all, 1)">
+                        <div
+                            data-c-align="base(center) tl(left)" 
+                            data-c-grid-item="base(1of1) tl(1of3)">
+                            <a
+                                data-c-button="outline(stop)"
+                                data-c-radius="rounded"
+                                href="#"
+                                title="Save and continue reviewing later.">Save and Reject</a>
+                        </div>
+                        <div
+                            data-c-align="base(center)" 
+                            data-c-grid-item="base(1of1) tl(1of3)">
+                            <a
+                                data-c-button="outline(c1)"
+                                data-c-radius="rounded"
+                                href="#"
+                                title="Save and continue reviewing later.">Save and Quit</a>
+                        </div>
+                        <div
+                            data-c-align="base(center) tl(right)" 
+                            data-c-grid-item="base(1of1) tl(1of3)">
+                            <a
+                                data-c-button="solid(go)"
+                                data-c-radius="rounded"
+                                href="#"
+                                title="Save and continue reviewing later.">Save and Approve</a>
+                        </div>
+                    </div>
+                </div> #}
             </div>
         </div>
     </div>

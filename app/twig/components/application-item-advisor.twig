@@ -18,10 +18,10 @@
             <p data-c-font-weight="bold">Name <span data-c-color="c2">&#x25B2; &#x25BC;</span></p>
         </div>
         <div data-c-grid-item="base(1of1) tl(1of7)">
-            <p data-c-font-weight="bold">Job ID <span data-c-color="c2">&#x25B2; &#x25BC;</span></p>
+            <p data-c-font-weight="bold">GC Jobs ID <span data-c-color="c2">&#x25B2; &#x25BC;</span></p>
         </div>
         <div data-c-grid-item="base(1of1) tl(1of7)">
-            <p data-c-font-weight="bold">GC Talent <span data-c-color="c2">&#x25B2; &#x25BC;</span></p>
+            <p data-c-font-weight="bold">Talent Cloud <span data-c-color="c2">&#x25B2; &#x25BC;</span></p>
         </div>
         <div data-c-grid-item="base(1of1) tl(1of7)">
             <p data-c-font-weight="bold">Date <span data-c-color="c2">&#x25B2; &#x25BC;</span></p>
@@ -32,7 +32,7 @@
     </div>
 </div>
 {% for application in applications %}
-    <div data-c-padding="tb(.5)">
+    <div>
         <div
             {% if application.delay == "ontime" %}
                 data-c-border="left(thick, solid, c1)"
@@ -42,46 +42,48 @@
             {% if loop.index is odd %}
                 data-c-background="gray(10)"
             {% endif %}>
-            <div data-c-grid="gutter(tb, .5) middle">
-                <div data-c-grid-item="base(1of1) tl(1of7)">
-                    {% if application.delay == "ontime" %}
-                        <p data-c-padding="left(1)">{{ application.time }}</p>
-                    {% elseif application.delay == "delayed" %}
-                        <p
-                            data-c-padding="left(1)"
-                            data-c-color="stop">{{ application.time }}</p>
-                    {% endif %}
-                </div>
-                <div data-c-grid-item="base(1of1) tl(1of7)">
-                    <p>{{ application.type|title }}</p>
-                </div>
-                <div data-c-grid-item="base(1of1) tl(1of7)">
-                    <p>{{ application.first }} {{ application.last }}</p>
-                </div>
-                <div data-c-grid-item="base(1of1) tl(1of7)">
-                    <p>{{ application.jobID }}</p>
-                </div>
-                <div data-c-grid-item="base(1of1) tl(1of7)">
-                    <p>
-                        <a
-                            href="{{ application.tcID.link }}"
-                            target="_blank"
-                            title="">{{ application.tcID.jobTitle }}</a>
-                    </p>
-                </div>
-                <div data-c-grid-item="base(1of1) tl(1of7)">
-                    <p>{{ application.date }}</p>
-                </div>
-                <div data-c-grid-item="base(1of1) tl(1of7)">
-                    {% if application.status == "assigned" %}
-                        <a
-                            href="$ROOT/admin/review-submission/"
-                            title="">View Application</a>
-                    {% elseif application.status == "unassigned" %}
-                        <a 
-                            href="#"
-                            title="Claim this security screening application.">Claim and Decrypt</a>
-                    {% endif %}
+            <div data-c-padding="tb(.5)">
+                <div data-c-grid="gutter(tb, .5) middle">
+                    <div data-c-grid-item="base(1of1) tl(1of7)">
+                        {% if application.delay == "ontime" %}
+                            <p data-c-padding="left(1)">{{ application.time }}</p>
+                        {% elseif application.delay == "delayed" %}
+                            <p
+                                data-c-padding="left(1)"
+                                data-c-color="stop">{{ application.time }}</p>
+                        {% endif %}
+                    </div>
+                    <div data-c-grid-item="base(1of1) tl(1of7)">
+                        <p>{{ application.type|title }}</p>
+                    </div>
+                    <div data-c-grid-item="base(1of1) tl(1of7)">
+                        <p>{{ application.first }} {{ application.last }}</p>
+                    </div>
+                    <div data-c-grid-item="base(1of1) tl(1of7)">
+                        <p>{{ application.jobID }}</p>
+                    </div>
+                    <div data-c-grid-item="base(1of1) tl(1of7)">
+                        <p>
+                            <a
+                                href="{{ application.tcID.link }}"
+                                target="_blank"
+                                title="">{{ application.tcID.jobTitle }}</a>
+                        </p>
+                    </div>
+                    <div data-c-grid-item="base(1of1) tl(1of7)">
+                        <p>{{ application.date }}</p>
+                    </div>
+                    <div data-c-grid-item="base(1of1) tl(1of7)">
+                        {% if application.status == "assigned" %}
+                            <a
+                                href="$ROOT/admin/review-submission/"
+                                title="">Approve/Deny</a>
+                        {% elseif application.status == "unassigned" %}
+                            <a 
+                                href="#"
+                                title="Claim this security screening application.">Claim and Decrypt</a>
+                        {% endif %}
+                    </div>
                 </div>
             </div>
         </div>
