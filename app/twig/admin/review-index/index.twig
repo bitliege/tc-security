@@ -32,9 +32,11 @@
             </div>
             {% include "../../components/application-item-advisor.twig" with {
                 "title": "My Screening Applications",
+                "state": "assigned",
                 "applications": [
                     {
                         "status": "assigned",
+                        "workStatus": "In Review",
                         "type": "reliability",
                         "first": "Jason",
                         "last": "Bergeron",
@@ -50,6 +52,7 @@
                     },
                     {
                         "status": "assigned",
+                        "workStatus": "Received",
                         "type": "top secret",
                         "first": "Lisa",
                         "last": "Cooke",
@@ -67,9 +70,11 @@
             } %}
             {% include "../../components/application-item-advisor.twig" with {
                 "title": "Unassigned Screening Applications",
+                "state": "unassigned",
                 "applications": [
                     {
                         "status": "unassigned",
+                        "workStatus": "Pending",
                         "type": "reliability",
                         "first": "Kurt",
                         "last": "Robinson",
@@ -85,6 +90,7 @@
                     },
                     {
                         "status": "unassigned",
+                        "workStatus": "Pending",
                         "type": "secret",
                         "first": "Frankie",
                         "last": "Russel",
@@ -100,6 +106,7 @@
                     },
                     {
                         "status": "unassigned",
+                        "workStatus": "Pending",
                         "type": "reliability",
                         "first": "Melanie",
                         "last": "Campbell",
@@ -115,6 +122,7 @@
                     },
                     {
                         "status": "unassigned",
+                        "workStatus": "Pending",
                         "type": "top secret",
                         "first": "Josef",
                         "last": "Morelli",
@@ -130,6 +138,7 @@
                     },
                     {
                         "status": "unassigned",
+                        "workStatus": "Pending",
                         "type": "reliability",
                         "first": "Giuseppe",
                         "last": "Duran",

@@ -18,14 +18,22 @@
             <p data-c-font-weight="bold">Name <span data-c-color="c2">&#x25B2; &#x25BC;</span></p>
         </div>
         <div data-c-grid-item="base(1of1) tl(1of7)">
-            <p data-c-font-weight="bold">GC Jobs ID <span data-c-color="c2">&#x25B2; &#x25BC;</span></p>
-        </div>
-        <div data-c-grid-item="base(1of1) tl(1of7)">
-            <p data-c-font-weight="bold">Talent Cloud <span data-c-color="c2">&#x25B2; &#x25BC;</span></p>
-        </div>
-        <div data-c-grid-item="base(1of1) tl(1of7)">
             <p data-c-font-weight="bold">Date <span data-c-color="c2">&#x25B2; &#x25BC;</span></p>
         </div>
+        {% if state == "assigned" %}
+            <div data-c-grid-item="base(1of1) tl(1of7)">
+        {% elseif state == "unassigned" %}
+            <div data-c-grid-item="base(1of1) tl(2of7)">
+        {% endif %}
+            <p data-c-font-weight="bold">Status <span data-c-color="c2">&#x25B2; &#x25BC;</span></p>
+        </div>
+        {% if state == "assigned" %}
+            <div data-c-grid-item="base(1of1) tl(1of7)">
+                <p data-c-font-weight="bold">Download</p>
+            </div>
+        {% elseif state == "unassigned" %}
+            {# Show nothing. #}
+        {% endif %}
         <div data-c-grid-item="base(1of1) tl(1of7)">
             <p data-c-font-weight="bold">Actions</p>
         </div>
@@ -60,24 +68,32 @@
                         <p>{{ application.first }} {{ application.last }}</p>
                     </div>
                     <div data-c-grid-item="base(1of1) tl(1of7)">
-                        <p>{{ application.jobID }}</p>
-                    </div>
-                    <div data-c-grid-item="base(1of1) tl(1of7)">
-                        <p>
-                            <a
-                                href="{{ application.tcID.link }}"
-                                target="_blank"
-                                title="">{{ application.tcID.jobTitle }}</a>
-                        </p>
-                    </div>
-                    <div data-c-grid-item="base(1of1) tl(1of7)">
                         <p>{{ application.date }}</p>
                     </div>
+                    {% if application.status == "assigned" %}
+                        <div data-c-grid-item="base(1of1) tl(1of7)">
+                    {% elseif application.status == "unassigned" %}
+                        <div data-c-grid-item="base(1of1) tl(2of7)">
+                    {% endif %}
+                        <p>{{ application.workStatus }}</p>
+                    </div>
+                    {% if application.status == "assigned" %}
+                        <div data-c-grid-item="base(1of1) tl(1of7)">
+                            <p>
+                                <a
+                                    href="#"
+                                    target="_blank"
+                                    title="">Download</a>
+                            </p>
+                        </div>
+                    {% elseif application.status == "unassigned" %}
+                        {# Show nothing. #}
+                    {% endif %}
                     <div data-c-grid-item="base(1of1) tl(1of7)">
                         {% if application.status == "assigned" %}
                             <a
                                 href="$ROOT/admin/review-submission/"
-                                title="">Approve/Deny</a>
+                                title="">Review</a>
                         {% elseif application.status == "unassigned" %}
                             <a 
                                 href="#"

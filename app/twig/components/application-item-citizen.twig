@@ -2,9 +2,9 @@
     <div
         data-c-card
         data-c-margin="top(.5)"
-        {% if application.status == "Denied" %}
+        {% if application.status == "Clarification Required" %}
             data-c-border="left(thick, solid, stop)"
-        {% elseif application.status == "Approved" %}
+        {% elseif application.status == "Decision Made" %}
             data-c-border="left(thick, solid, go)"
         {% endif %}>
         <div data-c-padding="all(1)">
@@ -23,11 +23,11 @@
                     <div data-c-grid-item="base(1of1) tl(2of4)">
                 {% endif %}
                     <p data-c-font-weight="bold">Status:</p>
-                    {% if application.status == "Awaiting Assignment" %}
+                    {% if application.status == "Pending" %}
                         <p data-c-color="gray">
-                    {% elseif application.status == "Approved" %}
+                    {% elseif application.status == "Decision Made" %}
                         <p data-c-color="go">
-                    {% elseif application.status == "Denied" %}
+                    {% elseif application.status == "Clarification Required" %}
                         <p data-c-color="stop">
                     {% endif %}
                         {{ application.status }}
